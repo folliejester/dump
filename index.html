@@ -123,6 +123,21 @@
             opacity: 0.8;
         }
 
+        .folder-filter {
+            border: 1px solid var(--ring);
+            border-radius: 14px;
+            padding: 12px 14px;
+            font-size: 0.96rem;
+            outline: none;
+            background: rgba(255, 255, 255, 0.85);
+            min-width: 180px;
+        }
+
+        .folder-filter:focus {
+            border-color: rgba(255, 107, 53, 0.65);
+            box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.15);
+        }
+
         .grid {
             margin-top: 24px;
             display: grid;
@@ -274,6 +289,9 @@
             <p>This page reads from <code>files.json</code>. Rebuild that file whenever your dump grows, and this page updates itself for all HTML, CSS, JS, and other file types.</p>
             <div class="toolbar">
                 <input id="search" class="search" type="search" placeholder="Filter by file name, extension, or path" aria-label="Filter content">
+                <select id="folderFilter" class="folder-filter" aria-label="Filter by folder">
+                    <option value="all">All folders</option>
+                </select>
                 <span id="count" class="meta"></span>
             </div>
         </header>
@@ -290,6 +308,7 @@
         const count = document.getElementById('count');
         const status = document.getElementById('status');
         const footer = document.getElementById('footer');
+        const folderFilter = document.getElementById('folderFilter');
         let cards = [];
 
         function formatBytes(bytes) {
@@ -325,14 +344,17 @@
             const ext = (file.ext || '').toLowerCase();
             const category = categoryFromExt(ext || file.name.toLowerCase());
             const href = encodeURI(file.path);
-            const tags = `${file.name} ${file.path} ${ext} ${category}`.toLowerCase();
+            const folder = file.folder || 'root';
+            const tags = `${file.name} ${file.path} ${folder} ${ext} ${category}`.toLowerCase();
 
             article.dataset.tags = tags;
+            article.dataset.folder = folder;
             article.innerHTML = `
                 <span class="card-type">${category}</span>
                 <h2>${file.name}</h2>
                 <p class="path">${file.path}</p>
                 <div class="facts">
+                    <span>folder: ${folder}</span>
                     <span>${ext || 'no extension'}</span>
                     <span>${formatBytes(file.size)}</span>
                 </div>
@@ -346,10 +368,13 @@
 
         function updateFilter() {
             const query = search.value.toLowerCase().trim();
+            const selectedFolder = folderFilter.value;
             let visible = 0;
 
             cards.forEach((card) => {
-                const show = card.dataset.tags.includes(query);
+                const queryMatch = card.dataset.tags.includes(query);
+                const folderMatch = selectedFolder === 'all' || card.dataset.folder === selectedFolder;
+                const show = queryMatch && folderMatch;
                 card.classList.toggle('hidden', !show);
                 if (show) visible += 1;
             });
@@ -366,10 +391,26 @@
 
         function sortFiles(files) {
             return [...files].sort((a, b) => {
+                const folderA = (a.folder || 'root').toLowerCase();
+                const folderB = (b.folder || 'root').toLowerCase();
+                if (folderA !== folderB) return folderA.localeCompare(folderB);
                 const extA = (a.ext || '').toLowerCase();
                 const extB = (b.ext || '').toLowerCase();
                 if (extA !== extB) return extA.localeCompare(extB);
                 return a.path.localeCompare(b.path);
+            });
+        }
+
+        function hydrateFolderFilter(files) {
+            const folderSet = new Set(files.map((file) => file.folder || 'root'));
+            const folders = [...folderSet].sort((a, b) => a.localeCompare(b));
+
+            folderFilter.innerHTML = '<option value="all">All folders</option>';
+            folders.forEach((folder) => {
+                const option = document.createElement('option');
+                option.value = folder;
+                option.textContent = folder;
+                folderFilter.appendChild(option);
             });
         }
 
@@ -381,10 +422,12 @@
                 const files = sortFiles((manifest.files || []).filter((f) => f.path !== 'files.json'));
 
                 cardsRoot.innerHTML = '';
+                hydrateFolderFilter(files);
                 cards = files.map((file, index) => createCard(file, index));
                 cards.forEach((card) => cardsRoot.appendChild(card));
 
                 search.addEventListener('input', updateFilter);
+                folderFilter.addEventListener('change', updateFilter);
                 updateFilter();
 
                 const generatedAt = manifest.generatedAt ? new Date(manifest.generatedAt) : null;
@@ -394,7 +437,7 @@
                 footer.textContent = `Manifest updated: ${stamp}`;
             } catch (error) {
                 status.style.display = 'block';
-                status.textContent = 'Could not load files.json. Run build-files-manifest.ps1 to generate it.';
+                status.textContent = 'Could not load files.json. Run node build-files-manifest.mjs to generate it.';
                 count.textContent = '0 items visible';
                 footer.textContent = 'Manifest unavailable';
             }

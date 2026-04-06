@@ -26,9 +26,12 @@ async function collectFiles(dir) {
     if (rel === 'files.json') continue;
 
     const stats = await fs.stat(fullPath);
+    const folder = path.posix.dirname(rel) === '.' ? 'root' : path.posix.dirname(rel);
+
     out.push({
       path: rel,
       name: path.basename(rel),
+      folder,
       ext: path.extname(rel).slice(1).toLowerCase(),
       size: stats.size,
       modified: stats.mtime.toISOString()
