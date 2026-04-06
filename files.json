@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-04-06T06:57:27.823Z",
+  "files": [
+    {
+      "path": "build-files-manifest.mjs",
+      "name": "build-files-manifest.mjs",
+      "ext": "mjs",
+      "size": 1510,
+      "modified": "2026-04-06T06:56:12.746Z"
+    },
+    {
+      "path": "FollieJester Streaming Hub.html",
+      "name": "FollieJester Streaming Hub.html",
+      "ext": "html",
+      "size": 10971,
+      "modified": "2026-04-06T06:49:04.286Z"
+    },
+    {
+      "path": "index.html",
+      "name": "index.html",
+      "ext": "html",
+      "size": 13365,
+      "modified": "2026-04-06T06:54:16.653Z"
+    },
+    {
+      "path": "Interactive IB Psych RBA.html",
+      "name": "Interactive IB Psych RBA.html",
+      "ext": "html",
+      "size": 29156,
+      "modified": "2026-04-06T06:46:57.048Z"
+    },
+    {
+      "path": "LICENSE",
+      "name": "LICENSE",
+      "ext": "",
+      "size": 35823,
+      "modified": "2026-04-06T06:43:23.837Z"
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dump Repository Index</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #1f1a1a;
+            --paper: #fffaf3;
+            --accent: #ff6b35;
+            --accent-2: #1f9d8f;
+            --card: rgba(255, 255, 255, 0.82);
+            --ring: rgba(31, 26, 26, 0.1);
+            --shadow: 0 20px 40px rgba(31, 26, 26, 0.12);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: 'Bricolage Grotesque', sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255, 107, 53, 0.22) 0%, rgba(255, 107, 53, 0) 40%),
+                radial-gradient(circle at 84% 16%, rgba(31, 157, 143, 0.22) 0%, rgba(31, 157, 143, 0) 45%),
+                linear-gradient(145deg, #fff7ec 0%, #f8f3ea 100%);
+            overflow-x: hidden;
+        }
+
+        .grain {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            background-image: radial-gradient(rgba(31, 26, 26, 0.06) 0.6px, transparent 0.6px);
+            background-size: 4px 4px;
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .wrap {
+            position: relative;
+            z-index: 1;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 30px 20px 48px;
+        }
+
+        .hero {
+            padding: 36px 24px;
+            border: 1px solid var(--ring);
+            border-radius: 24px;
+            background: var(--card);
+            backdrop-filter: blur(4px);
+            box-shadow: var(--shadow);
+            transform: translateY(12px);
+            opacity: 0;
+            animation: lift-in 700ms ease forwards;
+        }
+
+        .kicker {
+            display: inline-block;
+            font-family: 'Space Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            font-size: 0.78rem;
+            padding: 6px 10px;
+            background: rgba(255, 107, 53, 0.12);
+            color: #9c3d19;
+            border-radius: 999px;
+        }
+
+        h1 {
+            margin-top: 14px;
+            font-size: clamp(2rem, 6vw, 4rem);
+            line-height: 1.04;
+            letter-spacing: -1px;
+            max-width: 14ch;
+        }
+
+        .hero p {
+            margin-top: 14px;
+            max-width: 65ch;
+            font-size: clamp(0.98rem, 2vw, 1.12rem);
+            line-height: 1.5;
+            color: rgba(31, 26, 26, 0.8);
+        }
+
+        .toolbar {
+            margin-top: 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .search {
+            width: min(460px, 100%);
+            border: 1px solid var(--ring);
+            border-radius: 14px;
+            padding: 12px 14px;
+            font-size: 1rem;
+            outline: none;
+            background: rgba(255, 255, 255, 0.85);
+            transition: border-color 180ms ease, box-shadow 180ms ease;
+        }
+
+        .search:focus {
+            border-color: rgba(31, 157, 143, 0.65);
+            box-shadow: 0 0 0 4px rgba(31, 157, 143, 0.15);
+        }
+
+        .meta {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .grid {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            grid-column: span 4;
+            border-radius: 18px;
+            border: 1px solid var(--ring);
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 8px 24px rgba(31, 26, 26, 0.08);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transform: translateY(12px);
+            opacity: 0;
+            animation: lift-in 480ms ease forwards;
+        }
+
+        .card.hidden {
+            display: none;
+        }
+
+        .card-type {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.76rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: fit-content;
+            padding: 4px 9px;
+            border-radius: 999px;
+            background: rgba(31, 157, 143, 0.12);
+            color: #0f5e56;
+        }
+
+        .card h2 {
+            font-size: clamp(1.05rem, 2.6vw, 1.35rem);
+            line-height: 1.25;
+            word-break: break-word;
+        }
+
+        .path {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            opacity: 0.8;
+            word-break: break-all;
+        }
+
+        .facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.76rem;
+            opacity: 0.75;
+        }
+
+        .actions {
+            margin-top: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn {
+            text-decoration: none;
+            border: 1px solid rgba(31, 26, 26, 0.15);
+            border-radius: 12px;
+            padding: 9px 11px;
+            font-weight: 600;
+            color: var(--ink);
+            transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(31, 26, 26, 0.12);
+        }
+
+        .btn.primary {
+            background: var(--ink);
+            color: #fff;
+            border-color: var(--ink);
+        }
+
+        .btn.primary:hover {
+            background: #000;
+        }
+
+        .status {
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px dashed var(--ring);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.88rem;
+            display: none;
+        }
+
+        footer {
+            margin-top: 24px;
+            text-align: center;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            opacity: 0.75;
+        }
+
+        @keyframes lift-in {
+            from {
+                transform: translateY(12px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 980px) {
+            .card {
+                grid-column: span 6;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .wrap {
+                padding: 18px 14px 34px;
+            }
+
+            .hero {
+                padding: 24px 16px;
+            }
+
+            .card {
+                grid-column: span 12;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    <div class="wrap">
+        <header class="hero">
+            <span class="kicker">Dump Repo</span>
+            <h1>Auto index for every file in this repository.</h1>
+            <p>This page reads from <code>files.json</code>. Rebuild that file whenever your dump grows, and this page updates itself for all HTML, CSS, JS, and other file types.</p>
+            <div class="toolbar">
+                <input id="search" class="search" type="search" placeholder="Filter by file name, extension, or path" aria-label="Filter content">
+                <span id="count" class="meta"></span>
+            </div>
+        </header>
+
+        <main class="grid" id="cards"></main>
+        <div id="status" class="status"></div>
+
+        <footer id="footer">Manifest pending</footer>
+    </div>
+
+    <script>
+        const search = document.getElementById('search');
+        const cardsRoot = document.getElementById('cards');
+        const count = document.getElementById('count');
+        const status = document.getElementById('status');
+        const footer = document.getElementById('footer');
+        let cards = [];
+
+        function formatBytes(bytes) {
+            if (typeof bytes !== 'number' || Number.isNaN(bytes)) return 'unknown size';
+            if (bytes < 1024) return `${bytes} B`;
+            if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+            return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+        }
+
+        function categoryFromExt(ext) {
+            const map = {
+                html: 'Web Page',
+                css: 'Stylesheet',
+                js: 'Script',
+                json: 'Data File',
+                md: 'Markdown',
+                txt: 'Text File',
+                png: 'Image',
+                jpg: 'Image',
+                jpeg: 'Image',
+                gif: 'Image',
+                svg: 'Image',
+                license: 'License'
+            };
+            return map[ext] || 'File';
+        }
+
+        function createCard(file, index) {
+            const article = document.createElement('article');
+            article.className = 'card';
+            article.style.animationDelay = `${Math.min(index * 45, 450)}ms`;
+
+            const ext = (file.ext || '').toLowerCase();
+            const category = categoryFromExt(ext || file.name.toLowerCase());
+            const href = encodeURI(file.path);
+            const tags = `${file.name} ${file.path} ${ext} ${category}`.toLowerCase();
+
+            article.dataset.tags = tags;
+            article.innerHTML = `
+                <span class="card-type">${category}</span>
+                <h2>${file.name}</h2>
+                <p class="path">${file.path}</p>
+                <div class="facts">
+                    <span>${ext || 'no extension'}</span>
+                    <span>${formatBytes(file.size)}</span>
+                </div>
+                <div class="actions">
+                    <a class="btn primary" href="${href}" target="_blank" rel="noopener noreferrer">Open File</a>
+                </div>
+            `;
+
+            return article;
+        }
+
+        function updateFilter() {
+            const query = search.value.toLowerCase().trim();
+            let visible = 0;
+
+            cards.forEach((card) => {
+                const show = card.dataset.tags.includes(query);
+                card.classList.toggle('hidden', !show);
+                if (show) visible += 1;
+            });
+
+            count.textContent = `${visible} item${visible === 1 ? '' : 's'} visible`;
+            if (visible === 0) {
+                status.style.display = 'block';
+                status.textContent = 'No matches found. Try a different filter.';
+            } else if (status.dataset.mode === 'filter') {
+                status.style.display = 'none';
+            }
+            status.dataset.mode = visible === 0 ? 'filter' : '';
+        }
+
+        function sortFiles(files) {
+            return [...files].sort((a, b) => {
+                const extA = (a.ext || '').toLowerCase();
+                const extB = (b.ext || '').toLowerCase();
+                if (extA !== extB) return extA.localeCompare(extB);
+                return a.path.localeCompare(b.path);
+            });
+        }
+
+        async function loadManifest() {
+            try {
+                const response = await fetch('files.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error('manifest not found');
+                const manifest = await response.json();
+                const files = sortFiles((manifest.files || []).filter((f) => f.path !== 'files.json'));
+
+                cardsRoot.innerHTML = '';
+                cards = files.map((file, index) => createCard(file, index));
+                cards.forEach((card) => cardsRoot.appendChild(card));
+
+                search.addEventListener('input', updateFilter);
+                updateFilter();
+
+                const generatedAt = manifest.generatedAt ? new Date(manifest.generatedAt) : null;
+                const stamp = generatedAt && !Number.isNaN(generatedAt.getTime())
+                    ? generatedAt.toLocaleString()
+                    : 'unknown time';
+                footer.textContent = `Manifest updated: ${stamp}`;
+            } catch (error) {
+                status.style.display = 'block';
+                status.textContent = 'Could not load files.json. Run build-files-manifest.ps1 to generate it.';
+                count.textContent = '0 items visible';
+                footer.textContent = 'Manifest unavailable';
+            }
+        }
+
+        loadManifest();
+    </script>
+</body>
+</html>
