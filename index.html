@@ -94,6 +94,14 @@
             color: rgba(31, 26, 26, 0.8);
         }
 
+        .tagline {
+            margin-top: 10px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.84rem;
+            letter-spacing: 0.2px;
+            color: rgba(31, 26, 26, 0.68);
+        }
+
         .toolbar {
             margin-top: 24px;
             display: flex;
@@ -356,8 +364,9 @@
     <div class="wrap">
         <header class="hero">
             <span class="kicker">Dump Repo</span>
-            <h1>Auto index for every file in this repository.</h1>
-            <p>This page reads from <code>files.json</code>. Rebuild that file whenever your dump grows, and this page updates itself for all HTML, CSS, JS, and other file types.</p>
+            <h1>My digital junk drawer, indexed.</h1>
+            <p>Not a polished portfolio, just a live archive of things I make and park. Browse by folder, type, or recency.</p>
+            <p class="tagline">Not curated. Still useful.</p>
             <div class="toolbar">
                 <input id="search" class="search" type="search" placeholder="Filter by file name, extension, or path" aria-label="Filter content">
                 <select id="folderFilter" class="folder-filter" aria-label="Filter by folder">
