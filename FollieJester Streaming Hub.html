@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FollieJester Live Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0a0c;
+            --card-bg: #121216;
+            --neon-purple: #bc13fe;
+            --neon-blue: #1397fe;
+            --text-main: #e0e0e0;
+            --glow: 0 0 15px rgba(188, 19, 254, 0.5);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 0%, #1a1a2e 0%, #0a0a0c 100%);
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #fff;
+            text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-blue);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--neon-blue);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.8;
+        }
+
+        /* Responsive Grid */
+        .streams-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        @media (max-width: 1024px) {
+            .streams-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        .stream-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .stream-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(188, 19, 254, 0.2);
+            border-color: var(--neon-purple);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Neon Buttons */
+        .neon-btn {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px 20px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border: 2px solid;
+            cursor: pointer;
+            margin-top: auto;
+        }
+
+        .btn-yt { border-color: #ff0000; color: #ff0000; }
+        .btn-yt:hover { background: #ff0000; color: white; box-shadow: 0 0 20px rgba(255, 0, 0, 0.6); }
+
+        .btn-twitch { border-color: #9146ff; color: #9146ff; }
+        .btn-twitch:hover { background: #9146ff; color: white; box-shadow: 0 0 20px rgba(145, 70, 255, 0.6); }
+
+        .btn-kick { border-color: #53fc18; color: #53fc18; }
+        .btn-kick:hover { background: #53fc18; color: #000; box-shadow: 0 0 20px rgba(83, 252, 24, 0.6); }
+
+        .btn-trovo { border-color: #1ed760; color: #1ed760; }
+        .btn-trovo:hover { background: #1ed760; color: #000; box-shadow: 0 0 20px rgba(30, 215, 96, 0.6); }
+
+        /* Support Section */
+        .support-section {
+            text-align: center;
+            padding: 60px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .support-banner {
+            max-width: 100%;
+            width: 690px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+
+        .support-banner:hover {
+            transform: scale(1.02);
+            filter: brightness(1.2);
+            box-shadow: 0 0 30px var(--neon-purple);
+        }
+
+        /* Floating Chat Widget */
+        .chat-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--neon-purple);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 20px var(--neon-purple);
+            z-index: 1000;
+            transition: transform 0.3s ease;
+        }
+
+        .chat-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .chat-container {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            background: var(--card-bg);
+            border: 2px solid var(--neon-purple);
+            border-radius: 12px;
+            display: none;
+            flex-direction: column;
+            z-index: 999;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.8);
+            overflow: hidden;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .chat-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .chat-header {
+            background: #1a1a22;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--neon-purple);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media (max-width: 600px) {
+            .chat-container {
+                width: calc(100% - 40px);
+                right: 20px;
+                left: 20px;
+                bottom: 80px;
+            }
+            .chat-toggle {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>FollieJester</h1>
+        <div class="subtitle">Multi-Platform Live Experience</div>
+    </header>
+
+    <main class="streams-container">
+        <!-- YouTube -->
+        <div class="stream-card">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/live_stream?channel=UCfolliejester" allowfullscreen></iframe>
+            </div>
+            <a href="https://youtube.com/folliejester/live" target="_blank" class="neon-btn btn-yt">Watch on YouTube</a>
+        </div>
+
+        <!-- Twitch -->
+        <div class="stream-card">
+            <div class="video-wrapper">
+                <!-- Replace with your actual Twitch ID for full embed functionality -->
+                <iframe src="https://player.twitch.tv/?channel=folliejester&parent=localhost&parent=127.0.0.1" allowfullscreen></iframe>
+            </div>
+            <a href="https://www.twitch.tv/folliejester" target="_blank" class="neon-btn btn-twitch">Watch on Twitch</a>
+        </div>
+
+        <!-- Kick -->
+        <div class="stream-card">
+            <div class="video-wrapper">
+                <iframe src="https://kick.com/folliejester/embed" allowfullscreen></iframe>
+            </div>
+            <a href="https://kick.com/folliejester" target="_blank" class="neon-btn btn-kick">Watch on Kick</a>
+        </div>
+
+        <!-- Trovo -->
+        <div class="stream-card">
+            <div class="video-wrapper">
+                <iframe src="https://trovo.live/embed/folliejester" allowfullscreen></iframe>
+            </div>
+            <a href="https://trovo.live/s/folliejester/" target="_blank" class="neon-btn btn-trovo">Watch on Trovo</a>
+        </div>
+    </main>
+
+    <section class="support-section">
+        <h2 style="margin-bottom: 20px; font-family: 'Orbitron'; font-size: 1.5rem;">Support the Stream</h2>
+        <a href="https://ko-fi.com/folliejester" target="_blank">
+            <img src="support.gif" alt="Support Me" class="support-banner" onerror="this.src='https://placehold.co/690x158/121216/bc13fe?text=Support+Me+on+Ko-fi'">
+        </a>
+    </section>
+
+    <!-- Chat Toggle -->
+    <button class="chat-toggle" onclick="toggleChat()">Show Live Chat</button>
+    
+    <div class="chat-container" id="chatBox">
+        <div class="chat-header">LIVE STREAMLABS CHAT</div>
+        <iframe src="https://streamlabs.com/widgets/chat-box/v1/312D47611E732B68DAE848813C6C47BF065F824317B62FFBD41379DB3EBBB913ED253F10C0259B2DF4488FE94FCEC7BA2226B48CCD7BCA45286F21F8AF7EE91D144E050EA8E5E5D85993CF1824334E8C7F83027746E4D5FF9DAF97C3A95148ADCAD68CBA561067C93947202713B94B0A127C6CF76AC34267CCF36AF784"></iframe>
+    </div>
+
+    <script>
+        function toggleChat() {
+            const chat = document.getElementById('chatBox');
+            const btn = document.querySelector('.chat-toggle');
+            
+            if (chat.style.display === 'flex') {
+                chat.style.display = 'none';
+                btn.innerText = 'Show Live Chat';
+            } else {
+                chat.style.display = 'flex';
+                btn.innerText = 'Hide Live Chat';
+            }
+        }
+
+        // Handle Twitch Parent Param for local testing
+        window.addEventListener('load', () => {
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                const src = iframe.src;
+                if (src.includes('twitch.tv')) {
+                    const hostname = window.location.hostname;
+                    iframe.src = src.replace('parent=localhost', `parent=${hostname}`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
