@@ -320,18 +320,152 @@
 
         function categoryFromExt(ext) {
             const map = {
-                html: 'Web Page',
-                css: 'Stylesheet',
-                js: 'Script',
-                json: 'Data File',
+                // Folder
+                folder: 'Folder',
+                        
+                // Web / Frontend
+                html: 'HTML',
+                htm: 'HTML',
+                css: 'CSS',
+                scss: 'Sass',
+                sass: 'Sass',
+                less: 'Less',
+                js: 'JavaScript',
+                mjs: 'JavaScript Module',
+                cjs: 'CommonJS',
+                ts: 'TypeScript',
+                jsx: 'React JSX',
+                tsx: 'React TSX',
+                vue: 'Vue',
+                svelte: 'Svelte',
+                        
+                // Backend / General Code
+                py: 'Python',
+                java: 'Java',
+                class: 'Java Bytecode',
+                jar: 'Java Archive',
+                c: 'C',
+                h: 'C Header',
+                cpp: 'C++',
+                hpp: 'C++ Header',
+                cs: 'C#',
+                go: 'Go',
+                rs: 'Rust',
+                php: 'PHP',
+                rb: 'Ruby',
+                swift: 'Swift',
+                kt: 'Kotlin',
+                dart: 'Dart',
+                scala: 'Scala',
+                        
+                // Shell / Scripts
+                sh: 'Shell Script',
+                bash: 'Bash Script',
+                zsh: 'Zsh Script',
+                fish: 'Fish Script',
+                ps1: 'PowerShell',
+                bat: 'Batch Script',
+                cmd: 'Command Script',
+                        
+                // Data / Config
+                json: 'JSON',
+                jsonc: 'JSONC',
+                yaml: 'YAML',
+                yml: 'YAML',
+                xml: 'XML',
+                toml: 'TOML',
+                ini: 'INI',
+                conf: 'Config',
+                config: 'Config',
+                env: 'Environment',
+                properties: 'Properties',
+                        
+                // Docs
                 md: 'Markdown',
-                txt: 'Text File',
+                txt: 'Text',
+                rtf: 'Rich Text',
+                pdf: 'PDF',
+                doc: 'Word',
+                docx: 'Word',
+                odt: 'OpenDocument Text',
+                xls: 'Excel',
+                xlsx: 'Excel',
+                ods: 'OpenDocument Spreadsheet',
+                ppt: 'PowerPoint',
+                pptx: 'PowerPoint',
+                odp: 'OpenDocument Presentation',
+                        
+                // Images
                 png: 'Image',
                 jpg: 'Image',
                 jpeg: 'Image',
                 gif: 'Image',
-                svg: 'Image',
-                license: 'License'
+                svg: 'Vector Image',
+                webp: 'Image',
+                bmp: 'Bitmap',
+                tiff: 'TIFF',
+                ico: 'Icon',
+                avif: 'Image',
+                heic: 'Image',
+                        
+                // Audio
+                mp3: 'Audio',
+                wav: 'Audio',
+                ogg: 'Audio',
+                flac: 'Audio',
+                aac: 'Audio',
+                m4a: 'Audio',
+                        
+                // Video
+                mp4: 'Video',
+                mkv: 'Video',
+                avi: 'Video',
+                mov: 'Video',
+                webm: 'Video',
+                flv: 'Video',
+                        
+                // Archives
+                zip: 'Archive',
+                rar: 'Archive',
+                '7z': 'Archive',
+                tar: 'Archive',
+                gz: 'Gzip',
+                bz2: 'Bzip2',
+                xz: 'XZ',
+                iso: 'Disk Image',
+                        
+                // Databases
+                db: 'Database',
+                sqlite: 'SQLite',
+                sqlite3: 'SQLite',
+                sql: 'SQL',
+                        
+                // Fonts
+                ttf: 'Font',
+                otf: 'Font',
+                woff: 'Font',
+                woff2: 'Font',
+                        
+                // Dev / Tooling
+                dockerfile: 'Docker',
+                makefile: 'Makefile',
+                gradle: 'Gradle',
+                npmignore: 'NPM Config',
+                gitignore: 'Git Config',
+                gitattributes: 'Git Config',
+                lock: 'Lock File',
+                        
+                // Logs / Misc
+                log: 'Log',
+                tmp: 'Temp',
+                bak: 'Backup',
+                cache: 'Cache',
+                dat: 'Data',
+                bin: 'Binary',
+                        
+                // Special
+                license: 'License',
+                readme: 'Readme'
             };
             return map[ext] || 'File';
         }
