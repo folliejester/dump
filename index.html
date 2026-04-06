@@ -271,12 +271,6 @@
             opacity: 0.75;
         }
 
-        .updated {
-            font-family: 'Space Mono', monospace;
-            font-size: 0.74rem;
-            opacity: 0.78;
-        }
-
         .actions {
             margin-top: auto;
             display: flex;
@@ -388,7 +382,6 @@
         <main class="grid" id="cards"></main>
         <div id="status" class="status"></div>
 
-        <footer id="footer">Manifest pending</footer>
     </div>
 
     <script>
@@ -396,7 +389,6 @@
         const cardsRoot = document.getElementById('cards');
         const count = document.getElementById('count');
         const status = document.getElementById('status');
-        const footer = document.getElementById('footer');
         const folderFilter = document.getElementById('folderFilter');
         const sortFilter = document.getElementById('sortFilter');
         const typeChips = document.getElementById('typeChips');
@@ -409,13 +401,6 @@
             if (bytes < 1024) return `${bytes} B`;
             if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
             return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
-        }
-
-        function formatModified(value) {
-            if (!value) return 'Updated: unknown';
-            const parsed = new Date(value);
-            if (Number.isNaN(parsed.getTime())) return 'Updated: unknown';
-            return `Updated: ${parsed.toLocaleString()}`;
         }
 
         function categoryFromExt(ext) {
@@ -594,7 +579,6 @@
                     <span>${ext || 'no extension'}</span>
                     <span>${formatBytes(file.size)}</span>
                 </div>
-                <p class="updated">${formatModified(file.modified)}</p>
                 <div class="actions">
                     <a class="btn primary" href="${href}" target="_blank" rel="noopener noreferrer">Open File</a>
                 </div>
@@ -719,16 +703,10 @@
                 folderFilter.addEventListener('change', updateFilter);
                 sortFilter.addEventListener('change', renderCards);
 
-                const generatedAt = manifest.generatedAt ? new Date(manifest.generatedAt) : null;
-                const stamp = generatedAt && !Number.isNaN(generatedAt.getTime())
-                    ? generatedAt.toLocaleString()
-                    : 'unknown time';
-                footer.textContent = `Manifest updated: ${stamp} IST`;
             } catch (error) {
                 status.style.display = 'block';
                 status.textContent = 'Could not load files.json. Run node build-files-manifest.mjs to generate it.';
                 count.textContent = '0 items visible';
-                footer.textContent = 'Manifest unavailable';
             }
         }
 

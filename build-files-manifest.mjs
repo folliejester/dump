@@ -33,8 +33,7 @@ async function collectFiles(dir) {
       name: path.basename(rel),
       folder,
       ext: path.extname(rel).slice(1).toLowerCase(),
-      size: stats.size,
-      modified: stats.mtime.toISOString()
+      size: stats.size
     });
   }
 
@@ -44,7 +43,6 @@ async function collectFiles(dir) {
 async function main() {
   const files = await collectFiles(root);
   const manifest = {
-    generatedAt: new Date().toISOString(),
     files
   };
 

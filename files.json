@@ -1,61 +1,53 @@
 {
-  "generatedAt": "2026-04-06T07:16:42.638Z",
   "files": [
     {
       "path": "build-files-manifest.mjs",
       "name": "build-files-manifest.mjs",
       "folder": "root",
       "ext": "mjs",
-      "size": 1615,
-      "modified": "2026-04-06T06:59:34.958Z"
+      "size": 1527
     },
     {
       "path": "Email Client.html",
       "name": "Email Client.html",
       "folder": "root",
       "ext": "html",
-      "size": 17455,
-      "modified": "2026-04-06T07:12:43.993Z"
+      "size": 17455
     },
     {
       "path": "favicon.svg",
       "name": "favicon.svg",
       "folder": "root",
       "ext": "svg",
-      "size": 547,
-      "modified": "2026-04-06T07:04:42.604Z"
+      "size": 547
     },
     {
       "path": "FollieJester Streaming Hub.html",
       "name": "FollieJester Streaming Hub.html",
       "folder": "root",
       "ext": "html",
-      "size": 10971,
-      "modified": "2026-04-06T06:49:04.286Z"
+      "size": 10971
     },
     {
       "path": "index.html",
       "name": "index.html",
       "folder": "root",
       "ext": "html",
-      "size": 25546,
-      "modified": "2026-04-06T07:16:30.157Z"
+      "size": 24773
     },
     {
       "path": "Interactive IB Psych RBA.html",
       "name": "Interactive IB Psych RBA.html",
       "folder": "root",
       "ext": "html",
-      "size": 29156,
-      "modified": "2026-04-06T06:46:57.048Z"
+      "size": 29156
     },
     {
       "path": "LICENSE",
       "name": "LICENSE",
       "folder": "root",
       "ext": "",
-      "size": 35823,
-      "modified": "2026-04-06T06:43:23.837Z"
+      "size": 35823
     }
   ]
 }
