@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Sidebar Styling */
+        .sidebar-active {
+            background-color: #2c2c2e;
+            color: #ffffff;
+        }
+        
+        /* Custom Scrollbar for Message List */
+        .message-scroll::-webkit-scrollbar {
+            width: 5px;
+        }
+        .message-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .message-scroll::-webkit-scrollbar-thumb {
+            background: #3a3a3c;
+            border-radius: 10px;
+        }
+
+        .mail-item {
+            border-bottom: 0.5px solid #2c2c2e;
+        }
+        .mail-item.selected {
+            background-color: #3a3a3c;
+        }
+
+        .text-ios-blue { color: #0a84ff; }
+        .bg-ios-blue { background-color: #0a84ff; }
+
+        .avatar-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="flex flex-col">
+
+    <!-- Top Status/Nav Bar -->
+    <header class="h-10 flex items-center justify-between px-4 border-b border-[#1c1c1e] bg-[#000]">
+        <div class="flex items-center gap-2">
+            <span class="text-ios-blue font-semibold text-sm">Mail</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <i data-lucide="plus-circle" class="w-4 h-4 text-gray-400"></i>
+            <i data-lucide="layout-grid" class="w-4 h-4 text-gray-400"></i>
+            <div class="w-6 h-6 rounded-full overflow-hidden border border-[#333]">
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Rajorshi" alt="user">
+            </div>
+        </div>
+    </header>
+
+    <div class="flex flex-1 overflow-hidden">
+        
+        <!-- Column 1: Mailboxes Sidebar -->
+        <aside class="w-56 bg-black border-r border-[#1c1c1e] flex flex-col pt-4">
+            <div class="px-4 mb-4 flex items-center justify-between">
+                <h2 class="text-xl font-bold">Mailboxes</h2>
+                <div class="flex gap-3 text-ios-blue">
+                    <i data-lucide="rotate-cw" class="w-4 h-4 cursor-pointer"></i>
+                    <i data-lucide="info" class="w-4 h-4 cursor-pointer"></i>
+                </div>
+            </div>
+
+            <nav class="flex-1 px-2 space-y-0.5">
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md sidebar-active">
+                    <i data-lucide="inbox" class="w-4 h-4 text-ios-blue"></i>
+                    <span class="text-[14px]">Inbox</span>
+                </div>
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md text-gray-400 hover:bg-[#1c1c1e]">
+                    <i data-lucide="user" class="w-4 h-4"></i>
+                    <span class="text-[14px]">Primary</span>
+                </div>
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md text-gray-400 hover:bg-[#1c1c1e]">
+                    <i data-lucide="shopping-cart" class="w-4 h-4"></i>
+                    <span class="text-[14px]">Transactions</span>
+                </div>
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md text-gray-400 hover:bg-[#1c1c1e]">
+                    <i data-lucide="message-square" class="w-4 h-4 text-ios-blue"></i>
+                    <span class="text-[14px]">Updates</span>
+                </div>
+                <div class="flex items-center gap-3 px-3 py-1.5 rounded-md text-gray-400 hover:bg-[#1c1c1e]">
+                    <i data-lucide="megaphone" class="w-4 h-4"></i>
+                    <span class="text-[14px]">Promotions</span>
+                </div>
+
+                <div class="pt-4 flex items-center gap-2 px-3 text-xs font-semibold text-gray-500 uppercase tracking-tight">
+                    <i data-lucide="star" class="w-3 h-3 text-yellow-500 fill-yellow-500"></i> VIP
+                </div>
+
+                <div class="pt-2 space-y-0.5">
+                    <div class="flex items-center gap-3 px-3 py-1.5 rounded-md text-gray-400 hover:bg-[#1c1c1e]">
+                        <i data-lucide="file-text" class="w-4 h-4"></i>
+                        <span class="text-[14px]">Drafts</span>
+                    </div>
+                    <div class="flex items-center gap-3 px-3 py-1.5 rounded-md text-ios-blue hover:bg-[#1c1c1e]">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        <span class="text-[14px]">Sent</span>
+                    </div>
+                    <div class="flex items-center gap-3 px-3 py-1.5 rounded-md text-gray-400 hover:bg-[#1c1c1e]">
+                        <i data-lucide="archive" class="w-4 h-4"></i>
+                        <span class="text-[14px]">Junk</span>
+                    </div>
+                    <div class="flex items-center gap-3 px-3 py-1.5 rounded-md text-gray-400 hover:bg-[#1c1c1e]">
+                        <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        <span class="text-[14px]">Trash</span>
+                    </div>
+                </div>
+
+                <div class="pt-4 px-3 flex items-center justify-between group cursor-pointer">
+                    <span class="text-sm font-bold text-white">Folders</span>
+                    <i data-lucide="plus" class="w-3 h-3 text-gray-500"></i>
+                </div>
+            </nav>
+
+            <div class="p-4 border-t border-[#1c1c1e]">
+                <div class="flex items-center gap-2 text-[11px] text-gray-400">
+                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+                    <span>Cleanup Recommendations</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Column 2: Inbox Message List -->
+        <section class="w-80 bg-[#121212] border-r border-[#1c1c1e] flex flex-col">
+            <div class="p-3 border-b border-[#1c1c1e]">
+                <div class="relative group mb-2">
+                    <i data-lucide="search" class="w-3.5 h-3.5 absolute left-2.5 top-2 text-gray-500"></i>
+                    <input type="text" placeholder="Search" class="w-full bg-[#1c1c1e] text-sm rounded-md py-1.5 pl-8 pr-3 focus:outline-none">
+                </div>
+                <div class="flex items-center justify-between">
+                    <h2 class="text-lg font-bold">Inbox</h2>
+                    <i data-lucide="chevron-down" class="w-4 h-4 text-ios-blue"></i>
+                </div>
+                <div class="text-[10px] text-gray-500 uppercase tracking-widest font-semibold mt-0.5">8 Messages</div>
+            </div>
+
+            <div class="flex-1 overflow-y-auto message-scroll">
+                <!-- Message Item: Selected -->
+                <div class="mail-item selected p-3 cursor-pointer">
+                    <div class="flex gap-3">
+                        <div class="avatar-circle bg-[#007AFF] text-white">SM</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-baseline">
+                                <span class="font-semibold text-sm truncate">Sarah Miller</span>
+                                <span class="text-[11px] text-gray-400">12:30 PM</span>
+                            </div>
+                            <div class="text-[13px] text-gray-200 truncate">Welcome to the Q2 Product Strategy Team</div>
+                            <div class="text-[12px] text-gray-500 line-clamp-2 mt-0.5">Hi Rajorshi, I'm thrilled to have you join the team for this quarter's roadmap planning session.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message Item 2 -->
+                <div class="mail-item p-3 cursor-pointer hover:bg-[#1c1c1e]">
+                    <div class="flex gap-3">
+                        <div class="avatar-circle bg-[#34C759] text-white">SL</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-baseline">
+                                <span class="font-semibold text-sm truncate">Slack</span>
+                                <span class="text-[11px] text-gray-400">11:15 AM</span>
+                            </div>
+                            <div class="text-[13px] text-gray-200 truncate">New sign-in to your Slack workspace</div>
+                            <div class="text-[12px] text-gray-500 line-clamp-2 mt-0.5">A new device just signed in to your account from Bangalore, India. If this wasn't you...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message Item 3 -->
+                <div class="mail-item p-3 cursor-pointer hover:bg-[#1c1c1e]">
+                    <div class="flex gap-3">
+                        <div class="avatar-circle bg-[#FF9500] text-white">JW</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-baseline">
+                                <span class="font-semibold text-sm truncate">James Wilson</span>
+                                <span class="text-[11px] text-gray-400">Yesterday</span>
+                            </div>
+                            <div class="text-[13px] text-gray-200 truncate">Final Design Specs for Mobile App</div>
+                            <div class="text-[12px] text-gray-500 line-clamp-2 mt-0.5">Please review the attached Figma file for the final v2 specs before we hand off to dev.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message Item 4 -->
+                <div class="mail-item p-3 cursor-pointer hover:bg-[#1c1c1e]">
+                    <div class="flex gap-3">
+                        <div class="avatar-circle bg-black border border-[#2c2c2e]">
+                            <img src="https://www.google.com/favicon.ico" class="w-4 h-4" alt="google">
+                        </div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-baseline">
+                                <span class="font-semibold text-sm truncate">Google Calendar</span>
+                                <span class="text-[11px] text-gray-400">Yesterday</span>
+                            </div>
+                            <div class="text-[13px] text-gray-200 truncate">Invitation: Weekly Sync @ Mon Apr 13</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Column 3: Detailed View -->
+        <main class="flex-1 bg-black flex flex-col overflow-hidden">
+            <!-- Toolbar -->
+            <div class="h-10 flex items-center justify-end px-6 gap-6 text-ios-blue border-b border-[#1c1c1e]">
+                <i data-lucide="reply" class="w-4 h-4 cursor-pointer"></i>
+                <i data-lucide="reply-all" class="w-4 h-4 cursor-pointer"></i>
+                <i data-lucide="forward" class="w-4 h-4 cursor-pointer"></i>
+                <i data-lucide="folder" class="w-4 h-4 cursor-pointer"></i>
+                <i data-lucide="trash-2" class="w-4 h-4 cursor-pointer"></i>
+                <i data-lucide="more-horizontal" class="w-4 h-4 cursor-pointer"></i>
+                <div class="ml-4 border-l border-[#2c2c2e] pl-4">
+                    <i data-lucide="square-pen" class="w-4 h-4"></i>
+                </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="flex-1 bg-white overflow-y-auto">
+                <div class="max-w-[700px] mx-auto p-10 text-black">
+                    <!-- Sender Details -->
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-12 h-12 rounded-full bg-[#007AFF] text-white flex items-center justify-center font-bold text-lg">SM</div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-baseline">
+                                <h2 class="text-[16px] font-bold">Sarah Miller</h2>
+                                <span class="text-[12px] text-gray-400">12:30 PM</span>
+                            </div>
+                            <div class="text-[12px] text-gray-500">To: <span class="text-ios-blue">rajorshi@work.com</span> <span class="ml-2 text-ios-blue cursor-pointer">Details</span></div>
+                        </div>
+                    </div>
+
+                    <h1 class="text-[20px] font-bold mb-8 leading-tight">Welcome to the Q2 Product Strategy Team</h1>
+
+                    <!-- Message Body -->
+                    <div class="text-[14px] leading-[1.6] space-y-6 text-[#1c1c1e]">
+                        <p>Hi Rajorshi,</p>
+                        <p>I'm thrilled to have you join the team for this quarter's roadmap planning session! We've been looking for someone with your background in UX research to help us bridge the gap between user needs and our technical constraints.</p>
+                        <p>Our goal for Q2 is to increase user retention by 15% through a complete overhaul of the onboarding flow. I’ve added you to the primary project board where you can see the current progress and the backlog of user interviews we’ve conducted so far.</p>
+                        <p>We have our first official sync on Monday at 10:00 AM. In the meantime, feel free to dive into the documentation and let me know if you have any immediate questions.</p>
+                        <p>Welcome aboard!</p>
+                        <p>Best regards,<br>Sarah Miller</p>
+                    </div>
+
+                    <!-- Email Signature -->
+                    <div class="mt-12 pt-8 border-t border-gray-100">
+                        <div class="flex gap-4">
+                            <div class="w-10 h-10 bg-blue-600 flex items-center justify-center rounded-sm">
+                                <i data-lucide="layers" class="text-white w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-[15px]">Sarah Miller</p>
+                                <p class="text-[11px] text-gray-500 uppercase font-medium tracking-wide">Director of Product Strategy</p>
+                                <p class="text-[12px] text-ios-blue mt-0.5">s.miller@strategyco.io</p>
+                                <div class="mt-2 flex items-center gap-2">
+                                    <span class="font-bold text-[13px]">StrategyCo</span>
+                                    <span class="text-[12px] text-gray-400">| Engineering better outcomes.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Promo Graphic -->
+                    <div class="mt-10 bg-[#0c0c0c] text-white p-6 rounded-md flex items-center justify-between relative overflow-hidden">
+                        <div class="relative z-10">
+                            <h3 class="text-[24px] font-black italic uppercase leading-none tracking-tighter text-blue-400">2026</h3>
+                            <div class="flex items-center gap-2 mt-1">
+                                <span class="text-[24px] font-black italic uppercase leading-none tracking-tighter">Roadmap Series</span>
+                                <span class="bg-blue-500 text-[9px] font-bold px-1 py-0.5 rounded-sm">LIVE WEBINAR</span>
+                            </div>
+                        </div>
+                        <div class="relative z-10 bg-white text-black font-bold text-[11px] px-4 py-2 rounded-sm cursor-pointer hover:bg-gray-200 transition-colors uppercase">
+                            Register Now →
+                        </div>
+                        <!-- Decorative bg effect -->
+                        <div class="absolute right-0 top-0 bottom-0 w-48 bg-gradient-to-l from-blue-600/30 via-transparent to-transparent"></div>
+                    </div>
+
+                    <div class="mt-6 text-[10px] text-gray-400 italic">
+                        This email was sent to you as a member of the StrategyCo internal team.
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
