@@ -588,7 +588,7 @@
                 const stamp = generatedAt && !Number.isNaN(generatedAt.getTime())
                     ? generatedAt.toLocaleString()
                     : 'unknown time';
-                footer.textContent = `Manifest updated: ${stamp}`;
+                footer.textContent = `Manifest updated: ${stamp} IST`;
             } catch (error) {
                 status.style.display = 'block';
                 status.textContent = 'Could not load files.json. Run node build-files-manifest.mjs to generate it.';
