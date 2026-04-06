@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-06T07:04:30.198Z",
+  "generatedAt": "2026-04-06T07:16:42.638Z",
   "files": [
     {
       "path": "build-files-manifest.mjs",
@@ -10,12 +10,20 @@
       "modified": "2026-04-06T06:59:34.958Z"
     },
     {
+      "path": "Email Client.html",
+      "name": "Email Client.html",
+      "folder": "root",
+      "ext": "html",
+      "size": 17455,
+      "modified": "2026-04-06T07:12:43.993Z"
+    },
+    {
       "path": "favicon.svg",
       "name": "favicon.svg",
       "folder": "root",
       "ext": "svg",
       "size": 547,
-      "modified": "2026-04-06T07:04:09.924Z"
+      "modified": "2026-04-06T07:04:42.604Z"
     },
     {
       "path": "FollieJester Streaming Hub.html",
@@ -30,8 +38,8 @@
       "name": "index.html",
       "folder": "root",
       "ext": "html",
-      "size": 19754,
-      "modified": "2026-04-06T07:04:09.693Z"
+      "size": 25546,
+      "modified": "2026-04-06T07:16:30.157Z"
     },
     {
       "path": "Interactive IB Psych RBA.html",

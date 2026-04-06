@@ -124,6 +124,21 @@
             opacity: 0.8;
         }
 
+        .sort-filter {
+            border: 1px solid var(--ring);
+            border-radius: 14px;
+            padding: 12px 14px;
+            font-size: 0.96rem;
+            outline: none;
+            background: rgba(255, 255, 255, 0.85);
+            min-width: 190px;
+        }
+
+        .sort-filter:focus {
+            border-color: rgba(31, 157, 143, 0.65);
+            box-shadow: 0 0 0 4px rgba(31, 157, 143, 0.15);
+        }
+
         .folder-filter {
             border: 1px solid var(--ring);
             border-radius: 14px;
@@ -162,6 +177,36 @@
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             gap: 16px;
+        }
+
+        .type-chips {
+            margin-top: 14px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .chip {
+            border: 1px solid rgba(31, 26, 26, 0.12);
+            background: rgba(255, 255, 255, 0.78);
+            color: var(--ink);
+            border-radius: 999px;
+            padding: 7px 10px;
+            font-size: 0.78rem;
+            font-family: 'Space Mono', monospace;
+            cursor: pointer;
+            transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+        }
+
+        .chip:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 18px rgba(31, 26, 26, 0.1);
+        }
+
+        .chip.active {
+            background: rgba(255, 107, 53, 0.16);
+            border-color: rgba(255, 107, 53, 0.38);
+            color: #8d3717;
         }
 
         .card {
@@ -215,6 +260,12 @@
             font-family: 'Space Mono', monospace;
             font-size: 0.76rem;
             opacity: 0.75;
+        }
+
+        .updated {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.74rem;
+            opacity: 0.78;
         }
 
         .actions {
@@ -311,9 +362,17 @@
                 <select id="folderFilter" class="folder-filter" aria-label="Filter by folder">
                     <option value="all">All folders</option>
                 </select>
+                <select id="sortFilter" class="sort-filter" aria-label="Sort files">
+                    <option value="path-asc">Sort: Path A-Z</option>
+                    <option value="name-asc">Sort: Name A-Z</option>
+                    <option value="date-desc">Sort: Newest First</option>
+                    <option value="size-desc">Sort: Largest First</option>
+                    <option value="type-asc">Sort: Type A-Z</option>
+                </select>
                 <a class="repo-link" href="https://github.com/folliejester/dump" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
                 <span id="count" class="meta"></span>
             </div>
+            <div id="typeChips" class="type-chips"></div>
         </header>
 
         <main class="grid" id="cards"></main>
@@ -329,13 +388,24 @@
         const status = document.getElementById('status');
         const footer = document.getElementById('footer');
         const folderFilter = document.getElementById('folderFilter');
+        const sortFilter = document.getElementById('sortFilter');
+        const typeChips = document.getElementById('typeChips');
         let cards = [];
+        let loadedFiles = [];
+        let selectedType = 'all';
 
         function formatBytes(bytes) {
             if (typeof bytes !== 'number' || Number.isNaN(bytes)) return 'unknown size';
             if (bytes < 1024) return `${bytes} B`;
             if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
             return `${(bytes / (1024 * 1024)).toFixed(2)} MB`;
+        }
+
+        function formatModified(value) {
+            if (!value) return 'Updated: unknown';
+            const parsed = new Date(value);
+            if (Number.isNaN(parsed.getTime())) return 'Updated: unknown';
+            return `Updated: ${parsed.toLocaleString()}`;
         }
 
         function categoryFromExt(ext) {
@@ -500,9 +570,11 @@
             const href = encodeURI(file.path);
             const folder = file.folder || 'root';
             const tags = `${file.name} ${file.path} ${folder} ${ext} ${category}`.toLowerCase();
+            const typeKey = ext || 'none';
 
             article.dataset.tags = tags;
             article.dataset.folder = folder;
+            article.dataset.type = typeKey;
             article.innerHTML = `
                 <span class="card-type">${category}</span>
                 <h2>${file.name}</h2>
@@ -512,6 +584,7 @@
                     <span>${ext || 'no extension'}</span>
                     <span>${formatBytes(file.size)}</span>
                 </div>
+                <p class="updated">${formatModified(file.modified)}</p>
                 <div class="actions">
                     <a class="btn primary" href="${href}" target="_blank" rel="noopener noreferrer">Open File</a>
                 </div>
@@ -528,7 +601,8 @@
             cards.forEach((card) => {
                 const queryMatch = card.dataset.tags.includes(query);
                 const folderMatch = selectedFolder === 'all' || card.dataset.folder === selectedFolder;
-                const show = queryMatch && folderMatch;
+                const typeMatch = selectedType === 'all' || card.dataset.type === selectedType;
+                const show = queryMatch && folderMatch && typeMatch;
                 card.classList.toggle('hidden', !show);
                 if (show) visible += 1;
             });
@@ -543,8 +617,27 @@
             status.dataset.mode = visible === 0 ? 'filter' : '';
         }
 
-        function sortFiles(files) {
+        function sortFiles(files, mode) {
             return [...files].sort((a, b) => {
+                if (mode === 'name-asc') {
+                    return a.name.localeCompare(b.name);
+                }
+
+                if (mode === 'date-desc') {
+                    return new Date(b.modified).getTime() - new Date(a.modified).getTime();
+                }
+
+                if (mode === 'size-desc') {
+                    return (b.size || 0) - (a.size || 0);
+                }
+
+                if (mode === 'type-asc') {
+                    const extA = (a.ext || '').toLowerCase();
+                    const extB = (b.ext || '').toLowerCase();
+                    if (extA !== extB) return extA.localeCompare(extB);
+                    return a.path.localeCompare(b.path);
+                }
+
                 const folderA = (a.folder || 'root').toLowerCase();
                 const folderB = (b.folder || 'root').toLowerCase();
                 if (folderA !== folderB) return folderA.localeCompare(folderB);
@@ -553,6 +646,39 @@
                 if (extA !== extB) return extA.localeCompare(extB);
                 return a.path.localeCompare(b.path);
             });
+        }
+
+        function hydrateTypeChips(files) {
+            const typeSet = new Set(files.map((file) => ((file.ext || '').toLowerCase() || 'none')));
+            const preferred = ['all', 'html', 'css', 'js', 'mjs', 'json', 'md', 'svg', 'none'];
+            const dynamic = [...typeSet].sort((a, b) => a.localeCompare(b));
+            const order = [...new Set([...preferred, ...dynamic])];
+
+            typeChips.innerHTML = '';
+            order.forEach((type) => {
+                if (type !== 'all' && !typeSet.has(type)) return;
+
+                const chip = document.createElement('button');
+                chip.type = 'button';
+                chip.className = `chip${type === selectedType ? ' active' : ''}`;
+                chip.dataset.type = type;
+                chip.textContent = type === 'none' ? 'NO EXT' : type.toUpperCase();
+                chip.addEventListener('click', () => {
+                    selectedType = type;
+                    document.querySelectorAll('.chip').forEach((node) => node.classList.remove('active'));
+                    chip.classList.add('active');
+                    updateFilter();
+                });
+                typeChips.appendChild(chip);
+            });
+        }
+
+        function renderCards() {
+            const sorted = sortFiles(loadedFiles, sortFilter.value);
+            cardsRoot.innerHTML = '';
+            cards = sorted.map((file, index) => createCard(file, index));
+            cards.forEach((card) => cardsRoot.appendChild(card));
+            updateFilter();
         }
 
         function hydrateFolderFilter(files) {
@@ -573,16 +699,15 @@
                 const response = await fetch('files.json', { cache: 'no-store' });
                 if (!response.ok) throw new Error('manifest not found');
                 const manifest = await response.json();
-                const files = sortFiles((manifest.files || []).filter((f) => f.path !== 'files.json'));
+                loadedFiles = (manifest.files || []).filter((f) => f.path !== 'files.json');
 
-                cardsRoot.innerHTML = '';
-                hydrateFolderFilter(files);
-                cards = files.map((file, index) => createCard(file, index));
-                cards.forEach((card) => cardsRoot.appendChild(card));
+                hydrateFolderFilter(loadedFiles);
+                hydrateTypeChips(loadedFiles);
+                renderCards();
 
                 search.addEventListener('input', updateFilter);
                 folderFilter.addEventListener('change', updateFilter);
-                updateFilter();
+                sortFilter.addEventListener('change', renderCards);
 
                 const generatedAt = manifest.generatedAt ? new Date(manifest.generatedAt) : null;
                 const stamp = generatedAt && !Number.isNaN(generatedAt.getTime())
