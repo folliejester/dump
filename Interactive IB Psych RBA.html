@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive RBA: Dual-Coding Theory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #FAF9F6;
+            color: #1F2937;
+        }
+        .nav-active {
+            background-color: #E0E7FF;
+            color: #4F46E5;
+            font-weight: 600;
+            border-left: 4px solid #4F46E5;
+        }
+        .nav-item {
+            transition: all 0.2s ease-in-out;
+            border-left: 4px solid transparent;
+        }
+        .nav-item:hover:not(.nav-active) {
+            background-color: #F3F4F6;
+            border-left: 4px solid #D1D5DB;
+        }
+        .fade-in {
+            animation: fadeIn 0.4s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="flex flex-col md:flex-row h-screen overflow-hidden">
+
+    <!-- Chosen Palette: Warm Neutrals & Indigo. Background: Off-white (#FAF9F6), Cards: White, Accent: Indigo (#4F46E5) for academic tone, Chart Accents: Emerald and Amber. -->
+    
+    <!-- Application Structure Plan: The SPA is designed as a digital academic dashboard, replacing the linear format of a traditional report. It uses a persistent sidebar for navigation, allowing users to jump directly to specific parts of the assignment (Theory, Experiment, Results, Concepts, Methodology). This non-linear structure improves usability, as viewers (like an examiner or peer) can easily cross-reference the results with the methodological evaluation without scrolling back and forth. The content is broken into digestible, interactive chunks to reduce cognitive load. -->
+
+    <!-- Visualization & Content Choices: 
+         1. Introduction -> Inform -> Text Block -> Scrolling panel -> Sets context.
+         2. Results -> Compare -> Bar Chart (Chart.js) -> Hover tooltips -> Clearly shows the "slight but not significant" difference in means mentioned in the text.
+         3. Concept Analysis (Q2) -> Organize -> Interactive Grid/Cards -> Click to reveal -> Avoids wall-of-text, encourages active engagement with IB concepts.
+         4. Methodology (Q3/Q4) -> Organize -> Side-by-side flex layout -> Visual comparison of Experiment vs. Observation.
+         Library: Chart.js (Canvas) for data. Vanilla JS for interactions. -->
+
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <nav class="w-full md:w-64 bg-white shadow-lg z-10 flex flex-col h-auto md:h-full shrink-0">
+        <div class="p-6 border-b border-gray-100">
+            <h1 class="text-2xl font-bold text-indigo-700 tracking-tight">IB Psych HL</h1>
+            <p class="text-sm text-gray-500 mt-1">Research Based Assignment</p>
+        </div>
+        <div class="flex-1 overflow-y-auto py-4 flex flex-row md:flex-col gap-1 px-3 md:px-0 scrollbar-hide">
+            <button onclick="navigate('intro')" id="nav-intro" class="nav-item nav-active text-left px-6 py-3 w-full rounded-r-lg md:rounded-none whitespace-nowrap md:whitespace-normal">
+                <span class="mr-2">&#128214;</span> 1. Theory & Intro
+            </button>
+            <button onclick="navigate('experiment')" id="nav-experiment" class="nav-item text-left px-6 py-3 w-full rounded-r-lg md:rounded-none whitespace-nowrap md:whitespace-normal">
+                <span class="mr-2">&#129302;</span> 2. The Experiment
+            </button>
+            <button onclick="navigate('results')" id="nav-results" class="nav-item text-left px-6 py-3 w-full rounded-r-lg md:rounded-none whitespace-nowrap md:whitespace-normal">
+                <span class="mr-2">&#128202;</span> 3. Results & Conclusion
+            </button>
+            <button onclick="navigate('concepts')" id="nav-concepts" class="nav-item text-left px-6 py-3 w-full rounded-r-lg md:rounded-none whitespace-nowrap md:whitespace-normal">
+                <span class="mr-2">&#129488;</span> 4. Core Concepts
+            </button>
+            <button onclick="navigate('methodology')" id="nav-methodology" class="nav-item text-left px-6 py-3 w-full rounded-r-lg md:rounded-none whitespace-nowrap md:whitespace-normal">
+                <span class="mr-2">&#128269;</span> 5. Methodology Eval
+            </button>
+        </div>
+    </nav>
+
+    <main class="flex-1 overflow-y-auto p-6 md:p-10 relative">
+        
+        <section id="sec-intro" class="content-section fade-in max-w-4xl mx-auto">
+            <div class="mb-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Dual-Coding Theory</h2>
+                <p class="text-lg text-indigo-600 font-medium">Introduction and Background Context</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                <p class="text-gray-700 leading-relaxed mb-4">
+                    This section introduces the foundational psychological theory underlying the research practical. Understanding Allan Paivio's work is essential to contextualizing the experiment's aims and hypotheses.
+                </p>
+                <div class="p-6 bg-indigo-50 border-l-4 border-indigo-500 rounded-r-lg mb-6">
+                    <h3 class="text-xl font-bold text-indigo-900 mb-2">The Hypothesis (Paivio, 1971)</h3>
+                    <p class="text-indigo-800">
+                        The dual coding hypothesis proposes that the human mind processes information through two distinct channels: <strong>verbal</strong> and <strong>visual</strong>. Information encoded and stored in both forms allows for better retention and recall compared to single-channel encoding.
+                    </p>
+                </div>
+                <h4 class="font-bold text-gray-900 mt-6 mb-2">Key Mechanisms:</h4>
+                <ul class="list-none space-y-3 text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">&#10004;</span>
+                        <span><strong>Cognitive Load Management:</strong> Using both channels helps distribute and manage cognitive load, minimizing overload.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">&#10004;</span>
+                        <span><strong>Multiple Retrieval Pathways:</strong> Dual coding improves learning by providing multiple distinct memory traces to retrieve information from later.</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="sec-experiment" class="content-section hidden fade-in max-w-4xl mx-auto">
+            <div class="mb-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Class Practical Method</h2>
+                <p class="text-lg text-indigo-600 font-medium">Assignment Question 1</p>
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                This section details the specific methodology used in the class practical to test the Dual-Coding theory. It outlines the experimental design, variables, and procedure to establish how causality was investigated.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">&#127919;</span>
+                        <h3 class="text-xl font-bold text-gray-900">Aim</h3>
+                    </div>
+                    <p class="text-gray-700">
+                        To investigate the effect of visual cues (images) on word recall performance in a controlled laboratory setting.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">&#9878;</span>
+                        <h3 class="text-xl font-bold text-gray-900">Variables</h3>
+                    </div>
+                    <div class="space-y-3 text-gray-700">
+                        <p><strong>Independent Variable (IV):</strong> Presence of visual cues alongside words (Image Condition vs. No Image Condition).</p>
+                        <p><strong>Dependent Variable (DV):</strong> Number of words successfully recalled.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <span class="text-2xl mr-3">&#128220;</span>
+                        <h3 class="text-xl font-bold text-gray-900">Procedure Summary</h3>
+                    </div>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li>Participants were allocated to one of two conditions (Independent Measures design).</li>
+                        <li><strong>Condition 1 (Experimental):</strong> Presented with a list of words accompanied by corresponding images.</li>
+                        <li><strong>Condition 2 (Control):</strong> Presented with the same list of words, but with no accompanying images.</li>
+                        <li>Following a brief distractor task, participants were asked to recall as many words as possible.</li>
+                        <li>Scores were recorded and statistically analyzed.</li>
+                    </ol>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-results" class="content-section hidden fade-in max-w-4xl mx-auto">
+            <div class="mb-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Results & Conclusion</h2>
+                <p class="text-lg text-indigo-600 font-medium">Data Analysis and Findings</p>
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                This section presents the quantitative findings of the experiment and provides the concluding analysis, directly addressing whether the data supported the Dual-Coding hypothesis.
+            </p>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 mb-6">
+                <h3 class="text-center font-bold text-gray-800 mb-4">Mean Word Recall by Condition</h3>
+                
+                <div class="chart-container">
+                    <canvas id="resultsChart"></canvas>
+                </div>
+                
+                <div class="mt-6 flex flex-wrap gap-4 justify-center">
+                    <div class="bg-gray-50 px-4 py-2 rounded border border-gray-200 text-center">
+                        <span class="block text-sm text-gray-500 uppercase tracking-wider">Mann-Whitney U</span>
+                        <span class="text-xl font-bold text-gray-800">8.5</span>
+                    </div>
+                    <div class="bg-gray-50 px-4 py-2 rounded border border-gray-200 text-center">
+                        <span class="block text-sm text-gray-500 uppercase tracking-wider">p-value</span>
+                        <span class="text-xl font-bold text-gray-800">0.2327</span>
+                    </div>
+                    <div class="bg-red-50 px-4 py-2 rounded border border-red-200 text-center">
+                        <span class="block text-sm text-red-500 uppercase tracking-wider">Significance</span>
+                        <span class="text-xl font-bold text-red-700">Not Significant</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-indigo-900 text-white p-8 rounded-xl shadow-md">
+                <h3 class="text-2xl font-bold mb-4 text-indigo-100">Conclusion & Evaluation</h3>
+                <p class="mb-4 leading-relaxed">
+                    The results did <strong>not support the alternate hypothesis</strong>. While participants in the image condition showed a slightly higher mean recall score, the difference was not statistically significant (U=8.5, p=0.2327). This suggests the presence of images did not have a measurable impact under these specific conditions.
+                </p>
+                <p class="mb-6 leading-relaxed">
+                    The findings only <em>partially</em> support Paivio's theory. The lack of significance highlights the complexity of memory and the importance of methodological rigor.
+                </p>
+                
+                <h4 class="font-bold text-indigo-200 mb-2 border-b border-indigo-700 pb-2">Identified Limitations:</h4>
+                <ul class="list-disc list-inside space-y-1 text-indigo-100 mb-4">
+                    <li>Small sample size reduces statistical power.</li>
+                    <li>Participant variability (individual differences in memory capacity).</li>
+                    <li>Simplicity of the word list used (ceiling effects).</li>
+                    <li>Ecological validity concerns (TOK link: generalizing beyond lab).</li>
+                </ul>
+
+                <h4 class="font-bold text-indigo-200 mb-2 border-b border-indigo-700 pb-2">Future Research:</h4>
+                <p class="text-indigo-100 text-sm">
+                    Future studies should address these by using a larger, diverse sample, more complex learning materials, and a repeated-measures design to control for individual differences.
+                </p>
+            </div>
+        </section>
+
+        <section id="sec-concepts" class="content-section hidden fade-in max-w-5xl mx-auto">
+            <div class="mb-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Core Concepts in Context</h2>
+                <p class="text-lg text-indigo-600 font-medium">Assignment Question 2</p>
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                Explore how fundamental IB Psychology concepts relate directly to the Dual-Coding class practical. Click on each concept to reveal its specific application and analysis within this experiment.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="concept-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow" onclick="toggleConcept(this)">
+                    <div class="p-5 bg-gray-50 border-b border-gray-100 flex justify-between items-center">
+                        <h3 class="font-bold text-gray-800 text-lg">Bias</h3>
+                        <span class="text-gray-400 text-xl expand-icon">&#43;</span>
+                    </div>
+                    <div class="p-5 hidden concept-content text-gray-600 text-sm leading-relaxed">
+                        In this practical, bias could emerge through participant expectancy effects, where participants guess the aim (that images should help) and alter their effort. Researcher bias could also be present in the selection of words/images, perhaps inadvertently choosing words that are easier to visualize in the experimental condition.
+                    </div>
+                </div>
+
+                <div class="concept-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow" onclick="toggleConcept(this)">
+                    <div class="p-5 bg-gray-50 border-b border-gray-100 flex justify-between items-center">
+                        <h3 class="font-bold text-gray-800 text-lg">Causality</h3>
+                        <span class="text-gray-400 text-xl expand-icon">&#43;</span>
+                    </div>
+                    <div class="p-5 hidden concept-content text-gray-600 text-sm leading-relaxed">
+                        The true experiment method was chosen specifically to establish causality. By manipulating the IV (visual cues) and controlling extraneous variables in a lab setting, researchers attempt to isolate the cause-and-effect relationship on the DV (recall). However, the lack of statistical significance weakens causal claims here.
+                    </div>
+                </div>
+
+                <div class="concept-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow" onclick="toggleConcept(this)">
+                    <div class="p-5 bg-gray-50 border-b border-gray-100 flex justify-between items-center">
+                        <h3 class="font-bold text-gray-800 text-lg">Change</h3>
+                        <span class="text-gray-400 text-xl expand-icon">&#43;</span>
+                    </div>
+                    <div class="p-5 hidden concept-content text-gray-600 text-sm leading-relaxed">
+                        Change is evaluated by comparing the performance difference between the control group and the experimental group. The theory hypothesizes a positive change (improvement) in memory performance due to dual-coding. The data showed a slight change in means, but inferential stats proved this change was likely due to chance.
+                    </div>
+                </div>
+
+                <div class="concept-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow" onclick="toggleConcept(this)">
+                    <div class="p-5 bg-gray-50 border-b border-gray-100 flex justify-between items-center">
+                        <h3 class="font-bold text-gray-800 text-lg">Measurement</h3>
+                        <span class="text-gray-400 text-xl expand-icon">&#43;</span>
+                    </div>
+                    <div class="p-5 hidden concept-content text-gray-600 text-sm leading-relaxed">
+                        Memory, an internal cognitive process, cannot be observed directly. It was operationalized and measured quantitatively by counting the number of correctly recalled words. While objective, this measurement might not capture qualitative aspects of memory, such as the clarity of the recalled visual image.
+                    </div>
+                </div>
+
+                <div class="concept-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow" onclick="toggleConcept(this)">
+                    <div class="p-5 bg-gray-50 border-b border-gray-100 flex justify-between items-center">
+                        <h3 class="font-bold text-gray-800 text-lg">Perspective</h3>
+                        <span class="text-gray-400 text-xl expand-icon">&#43;</span>
+                    </div>
+                    <div class="p-5 hidden concept-content text-gray-600 text-sm leading-relaxed">
+                        The experiment takes a purely cognitive perspective, focusing on mental processing channels (visual/verbal) as information-processing mechanisms. It largely ignores sociocultural or biological perspectives on memory, such as how emotional significance or cultural background might influence what is recalled.
+                    </div>
+                </div>
+
+                <div class="concept-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden cursor-pointer hover:shadow-md transition-shadow" onclick="toggleConcept(this)">
+                    <div class="p-5 bg-gray-50 border-b border-gray-100 flex justify-between items-center">
+                        <h3 class="font-bold text-gray-800 text-lg">Responsibility</h3>
+                        <span class="text-gray-400 text-xl expand-icon">&#43;</span>
+                    </div>
+                    <div class="p-5 hidden concept-content text-gray-600 text-sm leading-relaxed">
+                        Ethical responsibility in this practical involved ensuring informed consent, minimizing participant stress during the memory task (e.g., ensuring they know it's a test of the theory, not their personal intelligence), and ensuring data anonymity, especially given small sample sizes common in class practicals.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sec-methodology" class="content-section hidden fade-in max-w-5xl mx-auto">
+            <div class="mb-8">
+                <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Methodological Evaluation</h2>
+                <p class="text-lg text-indigo-600 font-medium">Assignment Questions 3 & 4</p>
+            </div>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                This section critically compares the chosen experimental method with an alternative (observation) and proposes a novel study design to address the topic of Dual-Coding from a different methodological angle.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="bg-indigo-600 p-4">
+                        <h3 class="text-white font-bold text-lg">Q3: Compare & Contrast</h3>
+                    </div>
+                    <div class="p-6 text-sm text-gray-700 space-y-4">
+                        <p class="font-semibold border-b pb-2">The Current Experiment vs. An Observation</p>
+                        <div>
+                            <span class="text-indigo-600 font-bold">Similarities:</span> Both methods aim to gather empirical data to understand human behavior (memory). Both must operationalize variables (e.g., defining what constitutes a "recalled word" or an "observed study behavior").
+                        </div>
+                        <div>
+                            <span class="text-green-600 font-bold">Strengths of Experiment (Differences):</span> High internal validity. Allows for strict control over the IV (image presence) and standardized procedures, making it possible to infer causality and replicate the study. Observations struggle with causal inference.
+                        </div>
+                        <div>
+                            <span class="text-amber-600 font-bold">Strengths of Observation (Differences):</span> Higher ecological validity. An observation of students studying in a library would reflect real-world memory strategies, mitigating the TOK concern raised in the report about generalizing beyond the artificial laboratory setting.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                    <div class="bg-emerald-600 p-4">
+                        <h3 class="text-white font-bold text-lg">Q4: Design a New Study</h3>
+                    </div>
+                    <div class="p-6 text-sm text-gray-700 space-y-4">
+                        <p class="font-semibold border-b pb-2">Proposed Method: Semi-Structured Interview</p>
+                        <p>To investigate Dual-Coding from a qualitative perspective, addressing the limitations of the simple word-list experiment.</p>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong>Aim:</strong> To explore students' subjective experiences and perceived effectiveness of using visual vs. verbal study techniques in real academic settings.</li>
+                            <li><strong>Sample:</strong> Purposive sample of 15 high school students from various disciplines.</li>
+                            <li><strong>Procedure:</strong> Conduct 1-on-1 interviews using an interview guide. Questions would ask participants to describe their note-taking strategies (e.g., "Do you use diagrams? Why?").</li>
+                            <li><strong>Analysis:</strong> Inductive content analysis to identify emerging themes regarding cognitive load and memory retrieval strategies.</li>
+                            <li><strong>Justification:</strong> This addresses "participant variability" by exploring individual differences deeply, rather than treating them as statistical noise.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const chartData = {
+            labels: ['No Image Condition (Control)', 'Image Condition (Experimental)'],
+            datasets: [{
+                label: 'Mean Words Recalled',
+                data: [12.2, 14.5], 
+                backgroundColor: [
+                    'rgba(245, 158, 11, 0.7)', 
+                    'rgba(16, 185, 129, 0.7)'  
+                ],
+                borderColor: [
+                    'rgba(245, 158, 11, 1)',
+                    'rgba(16, 185, 129, 1)'
+                ],
+                borderWidth: 1,
+                borderRadius: 4
+            }]
+        };
+
+        let resultsChartInstance = null;
+
+        function initChart() {
+            const ctx = document.getElementById('resultsChart').getContext('2d');
+            
+            if (resultsChartInstance) {
+                resultsChartInstance.destroy();
+            }
+
+            resultsChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: chartData,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return ' Mean Recall: ' + context.parsed.y + ' words';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Mean Words Recalled' },
+                            max: 20
+                        },
+                        x: {
+                            ticks: {
+                                callback: function(value) {
+                                    const label = this.getLabelForValue(value);
+                                    if (label.length > 16) {
+                                        return label.match(/.{1,16}(\s|$)/g);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function navigate(sectionId) {
+            document.querySelectorAll('.content-section').forEach(sec => {
+                sec.classList.add('hidden');
+            });
+            document.querySelectorAll('.nav-item').forEach(nav => {
+                nav.classList.remove('nav-active');
+            });
+
+            document.getElementById('sec-' + sectionId).classList.remove('hidden');
+            document.getElementById('nav-' + sectionId).classList.add('nav-active');
+
+            if (sectionId === 'results') {
+                setTimeout(initChart, 50); 
+            }
+        }
+
+        function toggleConcept(element) {
+            const content = element.querySelector('.concept-content');
+            const icon = element.querySelector('.expand-icon');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.innerHTML = '&#8722;'; 
+                element.classList.add('border-indigo-300', 'shadow-md');
+            } else {
+                content.classList.add('hidden');
+                icon.innerHTML = '&#43;';
+                element.classList.remove('border-indigo-300', 'shadow-md');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            navigate('intro');
+        });
+    </script>
+</body>
+</html>
