@@ -139,6 +139,24 @@
             box-shadow: 0 0 0 4px rgba(255, 107, 53, 0.15);
         }
 
+        .repo-link {
+            text-decoration: none;
+            border: 1px solid rgba(31, 26, 26, 0.15);
+            border-radius: 14px;
+            padding: 11px 13px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--ink);
+            background: rgba(255, 255, 255, 0.85);
+            transition: transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+        }
+
+        .repo-link:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 107, 53, 0.14);
+            box-shadow: 0 8px 18px rgba(31, 26, 26, 0.12);
+        }
+
         .grid {
             margin-top: 24px;
             display: grid;
@@ -293,6 +311,7 @@
                 <select id="folderFilter" class="folder-filter" aria-label="Filter by folder">
                     <option value="all">All folders</option>
                 </select>
+                <a class="repo-link" href="https://github.com/folliejester/dump" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
                 <span id="count" class="meta"></span>
             </div>
         </header>
