@@ -256,9 +256,18 @@
         }
 
         .project-card {
-            grid-column: span 8;
+            grid-column: span 4;
             border-color: rgba(31, 157, 143, 0.22);
             background: rgba(255, 255, 255, 0.94);
+            cursor: pointer;
+            transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+        }
+
+        .project-card:hover,
+        .project-card:focus-visible {
+            border-color: rgba(31, 157, 143, 0.45);
+            box-shadow: 0 12px 28px rgba(31, 26, 26, 0.12);
+            outline: none;
         }
 
         .project-card .card-type {
@@ -271,6 +280,10 @@
             font-size: 0.8rem;
             opacity: 0.8;
             word-break: break-all;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
         }
 
         .facts {
@@ -280,51 +293,6 @@
             font-family: 'Space Mono', monospace;
             font-size: 0.76rem;
             opacity: 0.75;
-        }
-
-        .project-files {
-            display: grid;
-            gap: 7px;
-        }
-
-        .project-file {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 10px;
-            min-width: 0;
-            border: 1px solid rgba(31, 26, 26, 0.08);
-            border-radius: 10px;
-            padding: 7px 9px;
-            color: var(--ink);
-            background: rgba(31, 26, 26, 0.035);
-            text-decoration: none;
-            font-family: 'Space Mono', monospace;
-            font-size: 0.75rem;
-            transition: background-color 160ms ease, transform 160ms ease;
-        }
-
-        .project-file:hover {
-            background: rgba(31, 157, 143, 0.1);
-            transform: translateY(-1px);
-        }
-
-        .project-file-name {
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
-
-        .project-file-ext {
-            flex: 0 0 auto;
-            opacity: 0.68;
-            text-transform: uppercase;
-        }
-
-        .project-more {
-            font-family: 'Space Mono', monospace;
-            font-size: 0.75rem;
-            opacity: 0.65;
         }
 
         .actions {
@@ -369,6 +337,148 @@
             display: none;
         }
 
+        .project-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 20;
+            display: none;
+            padding: 28px;
+            background: rgba(255, 250, 243, 0.96);
+            backdrop-filter: blur(8px);
+        }
+
+        .project-modal.open {
+            display: block;
+        }
+
+        .project-modal-shell {
+            height: 100%;
+            max-width: 1120px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .project-modal-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(31, 26, 26, 0.12);
+        }
+
+        .project-modal-header h2 {
+            font-size: clamp(1.8rem, 5vw, 3.4rem);
+            line-height: 1.02;
+        }
+
+        .project-modal-meta {
+            margin-top: 8px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.82rem;
+            color: rgba(31, 26, 26, 0.68);
+        }
+
+        .modal-close {
+            width: 44px;
+            height: 44px;
+            border: 1px solid rgba(31, 26, 26, 0.15);
+            border-radius: 999px;
+            color: var(--ink);
+            background: rgba(255, 255, 255, 0.86);
+            font-size: 1.6rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: transform 160ms ease, background-color 160ms ease;
+        }
+
+        .modal-close:hover {
+            transform: translateY(-1px);
+            background: rgba(255, 107, 53, 0.14);
+        }
+
+        .modal-search {
+            width: 100%;
+            border: 1px solid var(--ring);
+            border-radius: 14px;
+            padding: 12px 14px;
+            font-size: 1rem;
+            outline: none;
+            background: rgba(255, 255, 255, 0.88);
+        }
+
+        .modal-file-list {
+            display: grid;
+            gap: 10px;
+            overflow-y: auto;
+            min-height: 0;
+            padding-right: 6px;
+            scrollbar-color: rgba(31, 157, 143, 0.55) rgba(31, 26, 26, 0.07);
+            scrollbar-width: thin;
+        }
+
+        .modal-file-list::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .modal-file-list::-webkit-scrollbar-track {
+            border-radius: 999px;
+            background: rgba(31, 26, 26, 0.07);
+        }
+
+        .modal-file-list::-webkit-scrollbar-thumb {
+            border-radius: 999px;
+            background: rgba(31, 157, 143, 0.5);
+        }
+
+        .modal-file {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto auto;
+            align-items: center;
+            gap: 14px;
+            border: 1px solid rgba(31, 26, 26, 0.09);
+            border-radius: 12px;
+            padding: 12px 14px;
+            color: var(--ink);
+            background: rgba(255, 255, 255, 0.74);
+            text-decoration: none;
+            transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+        }
+
+        .modal-file:hover {
+            transform: translateY(-1px);
+            background: rgba(31, 157, 143, 0.1);
+            box-shadow: 0 8px 18px rgba(31, 26, 26, 0.08);
+        }
+
+        .modal-file-name {
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.88rem;
+        }
+
+        .modal-file-ext,
+        .modal-file-size {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.76rem;
+            color: rgba(31, 26, 26, 0.62);
+            text-transform: uppercase;
+        }
+
+        .modal-empty {
+            padding: 16px;
+            border: 1px dashed var(--ring);
+            border-radius: 12px;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.88rem;
+            color: rgba(31, 26, 26, 0.68);
+        }
+
         footer {
             margin-top: 24px;
             text-align: center;
@@ -394,7 +504,7 @@
             }
 
             .project-card {
-                grid-column: span 12;
+                grid-column: span 6;
             }
         }
 
@@ -409,6 +519,18 @@
 
             .card {
                 grid-column: span 12;
+            }
+
+            .project-modal {
+                padding: 18px 14px;
+            }
+
+            .modal-file {
+                grid-template-columns: minmax(0, 1fr) auto;
+            }
+
+            .modal-file-size {
+                display: none;
             }
         }
     </style>
@@ -444,6 +566,21 @@
 
     </div>
 
+    <div id="projectModal" class="project-modal" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle" aria-hidden="true">
+        <div class="project-modal-shell">
+            <header class="project-modal-header">
+                <div>
+                    <span class="kicker">Folder</span>
+                    <h2 id="projectModalTitle">Folder</h2>
+                    <p id="projectModalMeta" class="project-modal-meta"></p>
+                </div>
+                <button id="projectModalClose" class="modal-close" type="button" aria-label="Close folder list">&times;</button>
+            </header>
+            <input id="projectModalSearch" class="modal-search" type="search" placeholder="Filter this folder" aria-label="Filter folder files">
+            <div id="projectModalFiles" class="modal-file-list"></div>
+        </div>
+    </div>
+
     <script>
         const search = document.getElementById('search');
         const cardsRoot = document.getElementById('cards');
@@ -452,9 +589,16 @@
         const folderFilter = document.getElementById('folderFilter');
         const sortFilter = document.getElementById('sortFilter');
         const typeChips = document.getElementById('typeChips');
+        const projectModal = document.getElementById('projectModal');
+        const projectModalTitle = document.getElementById('projectModalTitle');
+        const projectModalMeta = document.getElementById('projectModalMeta');
+        const projectModalFiles = document.getElementById('projectModalFiles');
+        const projectModalSearch = document.getElementById('projectModalSearch');
+        const projectModalClose = document.getElementById('projectModalClose');
         let cards = [];
         let loadedFiles = [];
         let cardItems = [];
+        let activeProject = null;
         let selectedType = 'all';
 
         function formatBytes(bytes) {
@@ -640,6 +784,11 @@
             return [...new Set(files.map((file) => ((file.ext || '').toLowerCase() || 'none')))].sort((a, b) => a.localeCompare(b));
         }
 
+        function getProjectFileLabel(project, file) {
+            const prefix = `${project.folder}/`;
+            return file.path.startsWith(prefix) ? file.path.slice(prefix.length) : file.path;
+        }
+
         function pickProjectEntry(files) {
             const sorted = [...files].sort((a, b) => a.path.localeCompare(b.path));
             const htmlFiles = sorted.filter((file) => ['html', 'htm'].includes((file.ext || '').toLowerCase()));
@@ -735,12 +884,11 @@
             const article = document.createElement('article');
             article.className = 'card project-card';
             article.style.animationDelay = `${Math.min(index * 45, 450)}ms`;
+            article.tabIndex = 0;
+            article.setAttribute('role', 'button');
+            article.setAttribute('aria-label', `Open ${project.name} folder list`);
 
-            const entry = project.entry || project.files[0];
-            const entryHref = entry ? pathToHref(entry.path) : '#';
             const typeKeys = project.typeKeys || getTypeKeys(project.files);
-            const previewFiles = project.files.slice(0, 5);
-            const remaining = project.files.length - previewFiles.length;
             const tags = [
                 project.name,
                 project.path,
@@ -754,7 +902,7 @@
             article.dataset.type = 'folder';
             article.dataset.types = typeKeys.join(' ');
             article.innerHTML = `
-                <span class="card-type">Project</span>
+                <span class="card-type">Folder</span>
                 <h2>${escapeHtml(project.name)}</h2>
                 <p class="path">${project.files.length} file${project.files.length === 1 ? '' : 's'} in ${escapeHtml(project.path)}</p>
                 <div class="facts">
@@ -762,21 +910,59 @@
                     <span>${escapeHtml(typeKeys.map((type) => type === 'none' ? 'no ext' : type).join(', '))}</span>
                     <span>${formatBytes(project.size)}</span>
                 </div>
-                <div class="project-files">
-                    ${previewFiles.map((file) => `
-                        <a class="project-file" href="${pathToHref(file.path)}" target="_blank" rel="noopener noreferrer">
-                            <span class="project-file-name">${escapeHtml(file.path.replace(`${project.folder}/`, ''))}</span>
-                            <span class="project-file-ext">${escapeHtml(file.ext || 'file')}</span>
-                        </a>
-                    `).join('')}
-                    ${remaining > 0 ? `<span class="project-more">+ ${remaining} more file${remaining === 1 ? '' : 's'}</span>` : ''}
-                </div>
-                <div class="actions">
-                    <a class="btn primary" href="${entryHref}" target="_blank" rel="noopener noreferrer">Open Project</a>
-                </div>
             `;
+            article.addEventListener('click', () => openProjectModal(project));
+            article.addEventListener('keydown', (event) => {
+                if (event.key !== 'Enter' && event.key !== ' ') return;
+                event.preventDefault();
+                openProjectModal(project);
+            });
 
             return article;
+        }
+
+        function renderProjectModalFiles(project, query = '') {
+            const normalizedQuery = query.toLowerCase().trim();
+            const files = project.files.filter((file) => {
+                const label = getProjectFileLabel(project, file);
+                const tags = `${label} ${file.name} ${file.path} ${file.ext || 'none'}`.toLowerCase();
+                return tags.includes(normalizedQuery);
+            });
+
+            if (files.length === 0) {
+                projectModalFiles.innerHTML = '<p class="modal-empty">No files match this filter.</p>';
+                return;
+            }
+
+            projectModalFiles.innerHTML = files.map((file) => {
+                const label = getProjectFileLabel(project, file);
+                return `
+                    <a class="modal-file" href="${pathToHref(file.path)}" target="_blank" rel="noopener noreferrer">
+                        <span class="modal-file-name">${escapeHtml(label)}</span>
+                        <span class="modal-file-ext">${escapeHtml(file.ext || 'file')}</span>
+                        <span class="modal-file-size">${formatBytes(file.size)}</span>
+                    </a>
+                `;
+            }).join('');
+        }
+
+        function openProjectModal(project) {
+            activeProject = project;
+            projectModalTitle.textContent = project.name;
+            projectModalMeta.textContent = `${project.files.length} file${project.files.length === 1 ? '' : 's'} in ${project.path} - ${formatBytes(project.size)}`;
+            projectModalSearch.value = '';
+            renderProjectModalFiles(project);
+            projectModal.classList.add('open');
+            projectModal.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+            projectModalSearch.focus();
+        }
+
+        function closeProjectModal() {
+            activeProject = null;
+            projectModal.classList.remove('open');
+            projectModal.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
         }
 
         function updateFilter() {
@@ -902,6 +1088,19 @@
                 count.textContent = '0 items visible';
             }
         }
+
+        projectModalClose.addEventListener('click', closeProjectModal);
+        projectModal.addEventListener('click', (event) => {
+            if (event.target === projectModal) closeProjectModal();
+        });
+        projectModalSearch.addEventListener('input', () => {
+            if (activeProject) renderProjectModalFiles(activeProject, projectModalSearch.value);
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && projectModal.classList.contains('open')) {
+                closeProjectModal();
+            }
+        });
 
         loadManifest();
     </script>

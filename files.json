@@ -1,6 +1,314 @@
 {
   "files": [
     {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-grid.css",
+      "name": "bootstrap-grid.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 70323
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-grid.css.map",
+      "name": "bootstrap-grid.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 203340
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-grid.min.css",
+      "name": "bootstrap-grid.min.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 51789
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-grid.min.css.map",
+      "name": "bootstrap-grid.min.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 115912
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-grid.rtl.css",
+      "name": "bootstrap-grid.rtl.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 70397
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-grid.rtl.css.map",
+      "name": "bootstrap-grid.rtl.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 203344
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-grid.rtl.min.css",
+      "name": "bootstrap-grid.rtl.min.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 51864
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-grid.rtl.min.css.map",
+      "name": "bootstrap-grid.rtl.min.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 115989
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-reboot.css",
+      "name": "bootstrap-reboot.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 12156
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-reboot.css.map",
+      "name": "bootstrap-reboot.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 129863
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-reboot.min.css",
+      "name": "bootstrap-reboot.min.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 10205
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-reboot.min.css.map",
+      "name": "bootstrap-reboot.min.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 51660
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-reboot.rtl.css",
+      "name": "bootstrap-reboot.rtl.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 12149
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-reboot.rtl.css.map",
+      "name": "bootstrap-reboot.rtl.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 129878
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-reboot.rtl.min.css",
+      "name": "bootstrap-reboot.rtl.min.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 10277
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-reboot.rtl.min.css.map",
+      "name": "bootstrap-reboot.rtl.min.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 64328
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-utilities.css",
+      "name": "bootstrap-utilities.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 107938
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-utilities.css.map",
+      "name": "bootstrap-utilities.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 267983
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-utilities.min.css",
+      "name": "bootstrap-utilities.min.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 85457
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-utilities.min.css.map",
+      "name": "bootstrap-utilities.min.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 180636
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-utilities.rtl.css",
+      "name": "bootstrap-utilities.rtl.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 107806
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-utilities.rtl.css.map",
+      "name": "bootstrap-utilities.rtl.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 267924
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-utilities.rtl.min.css",
+      "name": "bootstrap-utilities.rtl.min.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 85386
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap-utilities.rtl.min.css.map",
+      "name": "bootstrap-utilities.rtl.min.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 180472
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap.css",
+      "name": "bootstrap.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 280311
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap.css.map",
+      "name": "bootstrap.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 680938
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap.min.css",
+      "name": "bootstrap.min.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 232111
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap.min.css.map",
+      "name": "bootstrap.min.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 590038
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap.rtl.css",
+      "name": "bootstrap.rtl.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 279526
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap.rtl.css.map",
+      "name": "bootstrap.rtl.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 680798
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap.rtl.min.css",
+      "name": "bootstrap.rtl.min.css",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "css",
+      "size": 232219
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/css/bootstrap.rtl.min.css.map",
+      "name": "bootstrap.rtl.min.css.map",
+      "folder": "bootstrap-5.3.8-dist/css",
+      "ext": "map",
+      "size": 589235
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.bundle.js",
+      "name": "bootstrap.bundle.js",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "js",
+      "size": 207836
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.bundle.js.map",
+      "name": "bootstrap.bundle.js.map",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "map",
+      "size": 431870
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js",
+      "name": "bootstrap.bundle.min.js",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "js",
+      "size": 80496
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js.map",
+      "name": "bootstrap.bundle.min.js.map",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "map",
+      "size": 332111
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.esm.js",
+      "name": "bootstrap.esm.js",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "js",
+      "size": 135902
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.esm.js.map",
+      "name": "bootstrap.esm.js.map",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "map",
+      "size": 297005
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.esm.min.js",
+      "name": "bootstrap.esm.min.js",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "js",
+      "size": 73811
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.esm.min.js.map",
+      "name": "bootstrap.esm.min.js.map",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "map",
+      "size": 222322
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.js",
+      "name": "bootstrap.js",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "js",
+      "size": 145474
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.js.map",
+      "name": "bootstrap.js.map",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "map",
+      "size": 298167
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.min.js",
+      "name": "bootstrap.min.js",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "js",
+      "size": 60539
+    },
+    {
+      "path": "bootstrap-5.3.8-dist/js/bootstrap.min.js.map",
+      "name": "bootstrap.min.js.map",
+      "folder": "bootstrap-5.3.8-dist/js",
+      "ext": "map",
+      "size": 220618
+    },
+    {
       "path": "build-files-manifest.mjs",
       "name": "build-files-manifest.mjs",
       "folder": "root",
@@ -33,7 +341,7 @@
       "name": "index.html",
       "folder": "root",
       "ext": "html",
-      "size": 32120
+      "size": 39268
     },
     {
       "path": "Interactive IB Psych RBA.html",
@@ -48,6 +356,2785 @@
       "folder": "root",
       "ext": "",
       "size": 35823
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/css/mdb.min.css",
+      "name": "mdb.min.css",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/css",
+      "ext": "css",
+      "size": 380016
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/css/mdb.min.css.map",
+      "name": "mdb.min.css.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/css",
+      "ext": "map",
+      "size": 579284
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/css/mdb.rtl.min.css",
+      "name": "mdb.rtl.min.css",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/css",
+      "ext": "css",
+      "size": 381657
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/img/mdb-favicon.ico",
+      "name": "mdb-favicon.ico",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/img",
+      "ext": "ico",
+      "size": 1150
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/index.html",
+      "name": "index.html",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0",
+      "ext": "html",
+      "size": 1845
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/js/mdb.es.min.js",
+      "name": "mdb.es.min.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/js",
+      "ext": "js",
+      "size": 258852
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/js/mdb.es.min.js.map",
+      "name": "mdb.es.min.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/js",
+      "ext": "map",
+      "size": 533460
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/js/mdb.umd.min.js",
+      "name": "mdb.umd.min.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/js",
+      "ext": "js",
+      "size": 125122
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/js/mdb.umd.min.js.map",
+      "name": "mdb.umd.min.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/js",
+      "ext": "map",
+      "size": 524331
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/License.txt",
+      "name": "License.txt",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0",
+      "ext": "txt",
+      "size": 1235
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/package.json",
+      "name": "package.json",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0",
+      "ext": "json",
+      "size": 162
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/README.txt",
+      "name": "README.txt",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0",
+      "ext": "txt",
+      "size": 120
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/autoinit/callbacks/free.js",
+      "name": "free.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/autoinit/callbacks",
+      "ext": "js",
+      "size": 15617
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/autoinit/index.free.js",
+      "name": "index.free.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/autoinit",
+      "ext": "js",
+      "size": 224
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/autoinit/init.js",
+      "name": "init.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/autoinit",
+      "ext": "js",
+      "size": 2896
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/autoinit/initSelectors/free.js",
+      "name": "free.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/autoinit/initSelectors",
+      "ext": "js",
+      "size": 2395
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/alert.js",
+      "name": "alert.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 3062
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/alert.js.map",
+      "name": "alert.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 4244
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/base-component.js",
+      "name": "base-component.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 3039
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/base-component.js.map",
+      "name": "base-component.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 4560
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/button.js",
+      "name": "button.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 2600
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/button.js.map",
+      "name": "button.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 3446
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/carousel.js",
+      "name": "carousel.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 14148
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/carousel.js.map",
+      "name": "carousel.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 27152
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/collapse.js",
+      "name": "collapse.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 9356
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/collapse.js.map",
+      "name": "collapse.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 17760
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom/data.js",
+      "name": "data.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom",
+      "ext": "js",
+      "size": 2249
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom/data.js.map",
+      "name": "data.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom",
+      "ext": "map",
+      "size": 3008
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom/event-handler.js",
+      "name": "event-handler.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom",
+      "ext": "js",
+      "size": 10108
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom/event-handler.js.map",
+      "name": "event-handler.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom",
+      "ext": "map",
+      "size": 19164
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom/manipulator.js",
+      "name": "manipulator.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom",
+      "ext": "js",
+      "size": 2532
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom/manipulator.js.map",
+      "name": "manipulator.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom",
+      "ext": "map",
+      "size": 4264
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom/selector-engine.js",
+      "name": "selector-engine.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom",
+      "ext": "js",
+      "size": 4529
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom/selector-engine.js.map",
+      "name": "selector-engine.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dom",
+      "ext": "map",
+      "size": 7659
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dropdown.js",
+      "name": "dropdown.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 16513
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/dropdown.js.map",
+      "name": "dropdown.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 28970
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/modal.js",
+      "name": "modal.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 12499
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/modal.js.map",
+      "name": "modal.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 22231
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/offcanvas.js",
+      "name": "offcanvas.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 9317
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/offcanvas.js.map",
+      "name": "offcanvas.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 15922
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/popover.js",
+      "name": "popover.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 2823
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/popover.js.map",
+      "name": "popover.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 4046
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/scrollspy.js",
+      "name": "scrollspy.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 10326
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/scrollspy.js.map",
+      "name": "scrollspy.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 18874
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/tab.js",
+      "name": "tab.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 11006
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/tab.js.map",
+      "name": "tab.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 20488
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/toast.js",
+      "name": "toast.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 6511
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/toast.js.map",
+      "name": "toast.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 11830
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/tooltip.js",
+      "name": "tooltip.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "js",
+      "size": 21099
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/tooltip.js.map",
+      "name": "tooltip.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist",
+      "ext": "map",
+      "size": 36896
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/backdrop.js",
+      "name": "backdrop.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "js",
+      "size": 4314
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/backdrop.js.map",
+      "name": "backdrop.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "map",
+      "size": 7099
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/component-functions.js",
+      "name": "component-functions.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "js",
+      "size": 2202
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/component-functions.js.map",
+      "name": "component-functions.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "map",
+      "size": 2377
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/config.js",
+      "name": "config.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "js",
+      "size": 2699
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/config.js.map",
+      "name": "config.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "map",
+      "size": 3937
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/focustrap.js",
+      "name": "focustrap.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "js",
+      "size": 3659
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/focustrap.js.map",
+      "name": "focustrap.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "map",
+      "size": 5802
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/index.js",
+      "name": "index.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "js",
+      "size": 9659
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/index.js.map",
+      "name": "index.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "map",
+      "size": 16902
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/sanitizer.js",
+      "name": "sanitizer.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "js",
+      "size": 4123
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/sanitizer.js.map",
+      "name": "sanitizer.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "map",
+      "size": 7055
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/scrollbar.js",
+      "name": "scrollbar.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "js",
+      "size": 5018
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/scrollbar.js.map",
+      "name": "scrollbar.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "map",
+      "size": 7948
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/swipe.js",
+      "name": "swipe.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "js",
+      "size": 4601
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/swipe.js.map",
+      "name": "swipe.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "map",
+      "size": 8230
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/template-factory.js",
+      "name": "template-factory.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "js",
+      "size": 5029
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util/template-factory.js.map",
+      "name": "template-factory.js.map",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/dist/util",
+      "ext": "map",
+      "size": 8520
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/alert.js",
+      "name": "alert.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 2022
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/base-component.js",
+      "name": "base-component.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 2059
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/button.js",
+      "name": "button.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 1735
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/carousel.js",
+      "name": "carousel.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 12600
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/collapse.js",
+      "name": "collapse.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 8042
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/dom/data.js",
+      "name": "data.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/dom",
+      "ext": "js",
+      "size": 1504
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/dom/event-handler.js",
+      "name": "event-handler.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/dom",
+      "ext": "js",
+      "size": 8866
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/dom/manipulator.js",
+      "name": "manipulator.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/dom",
+      "ext": "js",
+      "size": 1777
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/dom/selector-engine.js",
+      "name": "selector-engine.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/dom",
+      "ext": "js",
+      "size": 3666
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/dropdown.js",
+      "name": "dropdown.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 14014
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/modal.js",
+      "name": "modal.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 10335
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/offcanvas.js",
+      "name": "offcanvas.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 7283
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/popover.js",
+      "name": "popover.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 1997
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/scrollspy.js",
+      "name": "scrollspy.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 9044
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/tab.js",
+      "name": "tab.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 9558
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/toast.js",
+      "name": "toast.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 5359
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/tooltip.js",
+      "name": "tooltip.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix",
+      "ext": "js",
+      "size": 17076
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util/backdrop.js",
+      "name": "backdrop.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util",
+      "ext": "js",
+      "size": 3325
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util/component-functions.js",
+      "name": "component-functions.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util",
+      "ext": "js",
+      "size": 1159
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util/config.js",
+      "name": "config.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util",
+      "ext": "js",
+      "size": 1866
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util/focustrap.js",
+      "name": "focustrap.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util",
+      "ext": "js",
+      "size": 2705
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util/index.js",
+      "name": "index.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util",
+      "ext": "js",
+      "size": 8109
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util/sanitizer.js",
+      "name": "sanitizer.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util",
+      "ext": "js",
+      "size": 3113
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util/scrollbar.js",
+      "name": "scrollbar.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util",
+      "ext": "js",
+      "size": 4004
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util/swipe.js",
+      "name": "swipe.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util",
+      "ext": "js",
+      "size": 3632
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util/template-factory.js",
+      "name": "template-factory.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/mdb-prefix/util",
+      "ext": "js",
+      "size": 3836
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/alert.js",
+      "name": "alert.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 2018
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/base-component.js",
+      "name": "base-component.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 2059
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/button.js",
+      "name": "button.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 1721
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/carousel.js",
+      "name": "carousel.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 12528
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/collapse.js",
+      "name": "collapse.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 8034
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/dom/data.js",
+      "name": "data.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/dom",
+      "ext": "js",
+      "size": 1504
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/dom/event-handler.js",
+      "name": "event-handler.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/dom",
+      "ext": "js",
+      "size": 8866
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/dom/manipulator.js",
+      "name": "manipulator.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/dom",
+      "ext": "js",
+      "size": 1768
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/dom/selector-engine.js",
+      "name": "selector-engine.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/dom",
+      "ext": "js",
+      "size": 3665
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/dropdown.js",
+      "name": "dropdown.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 14005
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/modal.js",
+      "name": "modal.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 10120
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/offcanvas.js",
+      "name": "offcanvas.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 7190
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/popover.js",
+      "name": "popover.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 1995
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/scrollspy.js",
+      "name": "scrollspy.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 8935
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/tab.js",
+      "name": "tab.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 9569
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/toast.js",
+      "name": "toast.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 5355
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/tooltip.js",
+      "name": "tooltip.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src",
+      "ext": "js",
+      "size": 17070
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util/backdrop.js",
+      "name": "backdrop.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util",
+      "ext": "js",
+      "size": 3325
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util/component-functions.js",
+      "name": "component-functions.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util",
+      "ext": "js",
+      "size": 1158
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util/config.js",
+      "name": "config.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util",
+      "ext": "js",
+      "size": 1866
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util/focustrap.js",
+      "name": "focustrap.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util",
+      "ext": "js",
+      "size": 2705
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util/index.js",
+      "name": "index.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util",
+      "ext": "js",
+      "size": 8108
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util/sanitizer.js",
+      "name": "sanitizer.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util",
+      "ext": "js",
+      "size": 3113
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util/scrollbar.js",
+      "name": "scrollbar.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util",
+      "ext": "js",
+      "size": 4004
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util/swipe.js",
+      "name": "swipe.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util",
+      "ext": "js",
+      "size": 3632
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util/template-factory.js",
+      "name": "template-factory.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/bootstrap/src/util",
+      "ext": "js",
+      "size": 3836
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/alert.js",
+      "name": "alert.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 1347
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/base-component.js",
+      "name": "base-component.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 1734
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/button.js",
+      "name": "button.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 6763
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/carousel.js",
+      "name": "carousel.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 1496
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/collapse.js",
+      "name": "collapse.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 1599
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/dropdown.js",
+      "name": "dropdown.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 6754
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/input.js",
+      "name": "input.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 9471
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/modal.js",
+      "name": "modal.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 1806
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/popover.js",
+      "name": "popover.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 1727
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/range.js",
+      "name": "range.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 4202
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/ripple.js",
+      "name": "ripple.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 13263
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/scrollspy.js",
+      "name": "scrollspy.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 3759
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/tab.js",
+      "name": "tab.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 4357
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/toast.js",
+      "name": "toast.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 1564
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free/tooltip.js",
+      "name": "tooltip.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/free",
+      "ext": "js",
+      "size": 1732
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/dom/data.js",
+      "name": "data.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/dom",
+      "ext": "js",
+      "size": 1628
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/dom/event-handler.js",
+      "name": "event-handler.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/dom",
+      "ext": "js",
+      "size": 10116
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/dom/manipulator.js",
+      "name": "manipulator.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/dom",
+      "ext": "js",
+      "size": 2765
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/dom/selector-engine.js",
+      "name": "selector-engine.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/dom",
+      "ext": "js",
+      "size": 2061
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/handlers/click-rail.js",
+      "name": "click-rail.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/handlers",
+      "ext": "js",
+      "size": 984
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/handlers/drag-thumb.js",
+      "name": "drag-thumb.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/handlers",
+      "ext": "js",
+      "size": 3106
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/handlers/keyboard.js",
+      "name": "keyboard.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/handlers",
+      "ext": "js",
+      "size": 3794
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/handlers/mouse-wheel.js",
+      "name": "mouse-wheel.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/handlers",
+      "ext": "js",
+      "size": 4833
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/handlers/touch.js",
+      "name": "touch.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/handlers",
+      "ext": "js",
+      "size": 5853
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/index.js",
+      "name": "index.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar",
+      "ext": "js",
+      "size": 7846
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/lib/class-names.js",
+      "name": "class-names.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/lib",
+      "ext": "js",
+      "size": 1067
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/lib/css.js",
+      "name": "css.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/lib",
+      "ext": "js",
+      "size": 314
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/lib/dom.js",
+      "name": "dom.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/lib",
+      "ext": "js",
+      "size": 901
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/lib/event-manager.js",
+      "name": "event-manager.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/lib",
+      "ext": "js",
+      "size": 1897
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/lib/util.js",
+      "name": "util.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/lib",
+      "ext": "js",
+      "size": 1248
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/process-scroll-diff.js",
+      "name": "process-scroll-diff.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar",
+      "ext": "js",
+      "size": 1774
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar/update-geometry.js",
+      "name": "update-geometry.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/perfect-scrollbar",
+      "ext": "js",
+      "size": 4833
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/focusTrap.js",
+      "name": "focusTrap.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util",
+      "ext": "js",
+      "size": 3024
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/index.js",
+      "name": "index.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util",
+      "ext": "js",
+      "size": 6979
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/keycodes.js",
+      "name": "keycodes.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util",
+      "ext": "js",
+      "size": 960
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/sanitizer.js",
+      "name": "sanitizer.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util",
+      "ext": "js",
+      "size": 3524
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/scrollbar.js",
+      "name": "scrollbar.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util",
+      "ext": "js",
+      "size": 2989
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/stack.js",
+      "name": "stack.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util",
+      "ext": "js",
+      "size": 2631
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/touch/index.js",
+      "name": "index.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/touch",
+      "ext": "js",
+      "size": 1291
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/touch/swipe.js",
+      "name": "swipe.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/touch",
+      "ext": "js",
+      "size": 2043
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/touch/touchUtil.js",
+      "name": "touchUtil.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb/util/touch",
+      "ext": "js",
+      "size": 489
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb.free.es.js",
+      "name": "mdb.free.es.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js",
+      "ext": "js",
+      "size": 886
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js/mdb.free.umd.js",
+      "name": "mdb.free.umd.js",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/js",
+      "ext": "js",
+      "size": 1093
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/bootstrap-grid.scss",
+      "name": "bootstrap-grid.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 1244
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/bootstrap-reboot.scss",
+      "name": "bootstrap-reboot.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 199
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/bootstrap-utilities.scss",
+      "name": "bootstrap-utilities.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 325
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/bootstrap.scss",
+      "name": "bootstrap.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 988
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms/_floating-labels.scss",
+      "name": "_floating-labels.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms",
+      "ext": "scss",
+      "size": 2789
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms/_form-check.scss",
+      "name": "_form-check.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms",
+      "ext": "scss",
+      "size": 5086
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms/_form-control.scss",
+      "name": "_form-control.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms",
+      "ext": "scss",
+      "size": 6820
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms/_form-range.scss",
+      "name": "_form-range.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms",
+      "ext": "scss",
+      "size": 2908
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms/_form-select.scss",
+      "name": "_form-select.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms",
+      "ext": "scss",
+      "size": 2573
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms/_form-text.scss",
+      "name": "_form-text.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms",
+      "ext": "scss",
+      "size": 230
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms/_input-group.scss",
+      "name": "_input-group.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms",
+      "ext": "scss",
+      "size": 4081
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms/_labels.scss",
+      "name": "_labels.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms",
+      "ext": "scss",
+      "size": 1178
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms/_validation.scss",
+      "name": "_validation.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/forms",
+      "ext": "scss",
+      "size": 490
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_clearfix.scss",
+      "name": "_clearfix.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 40
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_color-bg.scss",
+      "name": "_color-bg.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 417
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_colored-links.scss",
+      "name": "_colored-links.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 2015
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_focus-ring.scss",
+      "name": "_focus-ring.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 400
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_icon-link.scss",
+      "name": "_icon-link.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 631
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_position.scss",
+      "name": "_position.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 657
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_ratio.scss",
+      "name": "_ratio.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 425
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_stacks.scss",
+      "name": "_stacks.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 260
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_stretched-link.scss",
+      "name": "_stretched-link.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 238
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_text-truncation.scss",
+      "name": "_text-truncation.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 80
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_visually-hidden.scss",
+      "name": "_visually-hidden.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 144
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers/_vr.scss",
+      "name": "_vr.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/helpers",
+      "ext": "scss",
+      "size": 168
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_alert.scss",
+      "name": "_alert.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 543
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_backdrop.scss",
+      "name": "_backdrop.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 358
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_banner.scss",
+      "name": "_banner.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 230
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_border-radius.scss",
+      "name": "_border-radius.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 2106
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_box-shadow.scss",
+      "name": "_box-shadow.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 416
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_breakpoints.scss",
+      "name": "_breakpoints.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 4718
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_buttons.scss",
+      "name": "_buttons.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 3422
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_caret.scss",
+      "name": "_caret.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 1656
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_clearfix.scss",
+      "name": "_clearfix.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 156
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_color-mode.scss",
+      "name": "_color-mode.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 468
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_color-scheme.scss",
+      "name": "_color-scheme.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 174
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_container.scss",
+      "name": "_container.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 443
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_deprecate.scss",
+      "name": "_deprecate.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 623
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_forms.scss",
+      "name": "_forms.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 4748
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_gradients.scss",
+      "name": "_gradients.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 2129
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_grid.scss",
+      "name": "_grid.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 4981
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_image.scss",
+      "name": "_image.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 411
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_list-group.scss",
+      "name": "_list-group.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 607
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_lists.scss",
+      "name": "_lists.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 175
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_pagination.scss",
+      "name": "_pagination.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 397
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_reset-text.scss",
+      "name": "_reset-text.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 512
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_resize.scss",
+      "name": "_resize.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 208
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_table-variants.scss",
+      "name": "_table-variants.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 1125
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_text-truncate.scss",
+      "name": "_text-truncate.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 176
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_transition.scss",
+      "name": "_transition.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 687
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_utilities.scss",
+      "name": "_utilities.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 3586
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins/_visually-hidden.scss",
+      "name": "_visually-hidden.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/mixins",
+      "ext": "scss",
+      "size": 1143
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/utilities/_api.scss",
+      "name": "_api.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/utilities",
+      "ext": "scss",
+      "size": 1822
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/vendor/_rfs.scss",
+      "name": "_rfs.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/vendor",
+      "ext": "scss",
+      "size": 10446
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_accordion.scss",
+      "name": "_accordion.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 5264
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_alert.scss",
+      "name": "_alert.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 2137
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_badge.scss",
+      "name": "_badge.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 1156
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_breadcrumb.scss",
+      "name": "_breadcrumb.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 1824
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_button-group.scss",
+      "name": "_button-group.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 3351
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_buttons.scss",
+      "name": "_buttons.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 7318
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_card.scss",
+      "name": "_card.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 7306
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_carousel.scss",
+      "name": "_carousel.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 6148
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_close.scss",
+      "name": "_close.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 2079
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_containers.scss",
+      "name": "_containers.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 1242
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_dropdown.scss",
+      "name": "_dropdown.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 8339
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_forms.scss",
+      "name": "_forms.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 265
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_functions.scss",
+      "name": "_functions.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 11404
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_grid.scss",
+      "name": "_grid.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 720
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_helpers.scss",
+      "name": "_helpers.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 365
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_images.scss",
+      "name": "_images.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 1199
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_list-group.scss",
+      "name": "_list-group.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 7093
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_maps.scss",
+      "name": "_maps.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 6200
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_mixins.scss",
+      "name": "_mixins.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 917
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_modal.scss",
+      "name": "_modal.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 7968
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_nav.scss",
+      "name": "_nav.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 5428
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_navbar.scss",
+      "name": "_navbar.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 9435
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_offcanvas.scss",
+      "name": "_offcanvas.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 4885
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_pagination.scss",
+      "name": "_pagination.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 4104
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_placeholders.scss",
+      "name": "_placeholders.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 937
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_popover.scss",
+      "name": "_popover.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 7216
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_progress.scss",
+      "name": "_progress.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 2096
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_reboot.scss",
+      "name": "_reboot.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 13022
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_root.scss",
+      "name": "_root.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 7121
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_spinners.scss",
+      "name": "_spinners.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 2527
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_tables.scss",
+      "name": "_tables.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 5166
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_toasts.scss",
+      "name": "_toasts.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 2593
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_tooltip.scss",
+      "name": "_tooltip.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 4482
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_transitions.scss",
+      "name": "_transitions.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 452
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_type.scss",
+      "name": "_type.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 1522
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_utilities.scss",
+      "name": "_utilities.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 21591
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_variables-dark.scss",
+      "name": "_variables-dark.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 4639
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap/_variables.scss",
+      "name": "_variables.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap",
+      "ext": "scss",
+      "size": 69369
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/bootstrap-grid.scss",
+      "name": "bootstrap-grid.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 1244
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/bootstrap-reboot.scss",
+      "name": "bootstrap-reboot.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 199
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/bootstrap-utilities.scss",
+      "name": "bootstrap-utilities.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 325
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/bootstrap.scss",
+      "name": "bootstrap.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 988
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms/_floating-labels.scss",
+      "name": "_floating-labels.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms",
+      "ext": "scss",
+      "size": 2789
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms/_form-check.scss",
+      "name": "_form-check.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms",
+      "ext": "scss",
+      "size": 5086
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms/_form-control.scss",
+      "name": "_form-control.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms",
+      "ext": "scss",
+      "size": 6820
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms/_form-range.scss",
+      "name": "_form-range.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms",
+      "ext": "scss",
+      "size": 2908
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms/_form-select.scss",
+      "name": "_form-select.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms",
+      "ext": "scss",
+      "size": 2573
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms/_form-text.scss",
+      "name": "_form-text.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms",
+      "ext": "scss",
+      "size": 230
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms/_input-group.scss",
+      "name": "_input-group.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms",
+      "ext": "scss",
+      "size": 4081
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms/_labels.scss",
+      "name": "_labels.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms",
+      "ext": "scss",
+      "size": 1178
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms/_validation.scss",
+      "name": "_validation.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/forms",
+      "ext": "scss",
+      "size": 490
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_clearfix.scss",
+      "name": "_clearfix.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 40
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_color-bg.scss",
+      "name": "_color-bg.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 417
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_colored-links.scss",
+      "name": "_colored-links.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 2015
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_focus-ring.scss",
+      "name": "_focus-ring.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 400
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_icon-link.scss",
+      "name": "_icon-link.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 631
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_position.scss",
+      "name": "_position.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 657
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_ratio.scss",
+      "name": "_ratio.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 425
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_stacks.scss",
+      "name": "_stacks.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 260
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_stretched-link.scss",
+      "name": "_stretched-link.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 238
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_text-truncation.scss",
+      "name": "_text-truncation.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 80
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_visually-hidden.scss",
+      "name": "_visually-hidden.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 144
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers/_vr.scss",
+      "name": "_vr.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/helpers",
+      "ext": "scss",
+      "size": 168
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_alert.scss",
+      "name": "_alert.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 543
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_backdrop.scss",
+      "name": "_backdrop.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 358
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_banner.scss",
+      "name": "_banner.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 230
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_border-radius.scss",
+      "name": "_border-radius.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 2106
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_box-shadow.scss",
+      "name": "_box-shadow.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 416
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_breakpoints.scss",
+      "name": "_breakpoints.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 4718
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_buttons.scss",
+      "name": "_buttons.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 3422
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_caret.scss",
+      "name": "_caret.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 1656
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_clearfix.scss",
+      "name": "_clearfix.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 156
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_color-mode.scss",
+      "name": "_color-mode.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 469
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_color-scheme.scss",
+      "name": "_color-scheme.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 174
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_container.scss",
+      "name": "_container.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 443
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_deprecate.scss",
+      "name": "_deprecate.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 623
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_forms.scss",
+      "name": "_forms.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 4748
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_gradients.scss",
+      "name": "_gradients.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 2129
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_grid.scss",
+      "name": "_grid.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 4981
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_image.scss",
+      "name": "_image.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 409
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_list-group.scss",
+      "name": "_list-group.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 607
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_lists.scss",
+      "name": "_lists.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 175
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_pagination.scss",
+      "name": "_pagination.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 397
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_reset-text.scss",
+      "name": "_reset-text.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 512
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_resize.scss",
+      "name": "_resize.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 208
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_table-variants.scss",
+      "name": "_table-variants.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 1125
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_text-truncate.scss",
+      "name": "_text-truncate.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 176
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_transition.scss",
+      "name": "_transition.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 687
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_utilities.scss",
+      "name": "_utilities.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 3584
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins/_visually-hidden.scss",
+      "name": "_visually-hidden.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/mixins",
+      "ext": "scss",
+      "size": 1143
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/utilities/_api.scss",
+      "name": "_api.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/utilities",
+      "ext": "scss",
+      "size": 1822
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/vendor/_rfs.scss",
+      "name": "_rfs.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/vendor",
+      "ext": "scss",
+      "size": 10446
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_accordion.scss",
+      "name": "_accordion.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 5264
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_alert.scss",
+      "name": "_alert.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 2137
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_badge.scss",
+      "name": "_badge.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 1156
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_breadcrumb.scss",
+      "name": "_breadcrumb.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 1824
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_button-group.scss",
+      "name": "_button-group.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 3351
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_buttons.scss",
+      "name": "_buttons.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 7318
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_card.scss",
+      "name": "_card.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 7306
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_carousel.scss",
+      "name": "_carousel.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 6151
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_close.scss",
+      "name": "_close.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 2079
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_containers.scss",
+      "name": "_containers.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 1242
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_dropdown.scss",
+      "name": "_dropdown.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 8345
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_forms.scss",
+      "name": "_forms.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 265
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_functions.scss",
+      "name": "_functions.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 11404
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_grid.scss",
+      "name": "_grid.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 720
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_helpers.scss",
+      "name": "_helpers.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 365
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_images.scss",
+      "name": "_images.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 1199
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_list-group.scss",
+      "name": "_list-group.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 7093
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_maps.scss",
+      "name": "_maps.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 6200
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_mixins.scss",
+      "name": "_mixins.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 917
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_modal.scss",
+      "name": "_modal.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 7968
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_nav.scss",
+      "name": "_nav.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 5428
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_navbar.scss",
+      "name": "_navbar.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 9436
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_offcanvas.scss",
+      "name": "_offcanvas.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 4885
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_pagination.scss",
+      "name": "_pagination.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 4104
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_placeholders.scss",
+      "name": "_placeholders.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 937
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_popover.scss",
+      "name": "_popover.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 7212
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_progress.scss",
+      "name": "_progress.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 2096
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_reboot.scss",
+      "name": "_reboot.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 13022
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_root.scss",
+      "name": "_root.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 7122
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_spinners.scss",
+      "name": "_spinners.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 2526
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_tables.scss",
+      "name": "_tables.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 5166
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_toasts.scss",
+      "name": "_toasts.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 2593
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_tooltip.scss",
+      "name": "_tooltip.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 4478
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_transitions.scss",
+      "name": "_transitions.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 452
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_type.scss",
+      "name": "_type.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 1522
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_utilities.scss",
+      "name": "_utilities.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 21591
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_variables-dark.scss",
+      "name": "_variables-dark.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 4640
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix/_variables.scss",
+      "name": "_variables.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/bootstrap-rtl-fix",
+      "ext": "scss",
+      "size": 69369
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/custom/_styles.scss",
+      "name": "_styles.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/custom",
+      "ext": "scss",
+      "size": 23
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/custom/_variables.scss",
+      "name": "_variables.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/custom",
+      "ext": "scss",
+      "size": 26
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms/_form-check.scss",
+      "name": "_form-check.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms",
+      "ext": "scss",
+      "size": 8249
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms/_form-control.scss",
+      "name": "_form-control.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms",
+      "ext": "scss",
+      "size": 7305
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms/_form-file.scss",
+      "name": "_form-file.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms",
+      "ext": "scss",
+      "size": 582
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms/_form-range.scss",
+      "name": "_form-range.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms",
+      "ext": "scss",
+      "size": 1140
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms/_form-select.scss",
+      "name": "_form-select.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms",
+      "ext": "scss",
+      "size": 344
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms/_input-group.scss",
+      "name": "_input-group.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms",
+      "ext": "scss",
+      "size": 3677
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms/_validation.scss",
+      "name": "_validation.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/forms",
+      "ext": "scss",
+      "size": 6394
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/mixins/_buttons.scss",
+      "name": "_buttons.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/mixins",
+      "ext": "scss",
+      "size": 3626
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/mixins/_color-mode.scss",
+      "name": "_color-mode.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/mixins",
+      "ext": "scss",
+      "size": 469
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/mixins/_ripple.scss",
+      "name": "_ripple.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/mixins",
+      "ext": "scss",
+      "size": 529
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/mixins/_table-variants.scss",
+      "name": "_table-variants.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/mixins",
+      "ext": "scss",
+      "size": 213
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_accordion.scss",
+      "name": "_accordion.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 1346
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_alert.scss",
+      "name": "_alert.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 762
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_badge.scss",
+      "name": "_badge.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 1689
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_breadcrumb.scss",
+      "name": "_breadcrumb.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 943
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_button-group.scss",
+      "name": "_button-group.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 1997
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_buttons.scss",
+      "name": "_buttons.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 20068
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_card.scss",
+      "name": "_card.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 1483
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_carousel.scss",
+      "name": "_carousel.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 1002
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_close.scss",
+      "name": "_close.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 340
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_colors.scss",
+      "name": "_colors.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 197
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_deprecated.scss",
+      "name": "_deprecated.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 652
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_dropdown.scss",
+      "name": "_dropdown.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 3883
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_flag.scss",
+      "name": "_flag.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 24471
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_functions.scss",
+      "name": "_functions.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 405
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_images.scss",
+      "name": "_images.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 1821
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_list-group.scss",
+      "name": "_list-group.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 2326
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_mixins.scss",
+      "name": "_mixins.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 206
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_modal.scss",
+      "name": "_modal.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 241
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_nav.scss",
+      "name": "_nav.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 3784
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_navbar.scss",
+      "name": "_navbar.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 1589
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_pagination.scss",
+      "name": "_pagination.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 2704
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_popover.scss",
+      "name": "_popover.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 381
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_progress.scss",
+      "name": "_progress.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 1557
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_range.scss",
+      "name": "_range.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 2119
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_reboot.scss",
+      "name": "_reboot.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 2068
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_ripple.scss",
+      "name": "_ripple.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 1464
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_root.scss",
+      "name": "_root.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 3319
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_scrollspy.scss",
+      "name": "_scrollspy.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 2501
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_shadows.scss",
+      "name": "_shadows.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 12
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_tables.scss",
+      "name": "_tables.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 932
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_toasts.scss",
+      "name": "_toasts.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 1311
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_tooltip.scss",
+      "name": "_tooltip.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 242
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_type.scss",
+      "name": "_type.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 751
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_utilities.scss",
+      "name": "_utilities.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 4252
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_variables-dark.scss",
+      "name": "_variables-dark.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 3614
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free/_variables.scss",
+      "name": "_variables.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/free",
+      "ext": "scss",
+      "size": 63357
+    },
+    {
+      "path": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss/mdb.free.scss",
+      "name": "mdb.free.scss",
+      "folder": "MDB5-STANDARD-UI-KIT-Free-9.3.0/src/scss",
+      "ext": "scss",
+      "size": 3096
     },
     {
       "path": "Sudofy/index.html",
