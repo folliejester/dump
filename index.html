@@ -228,6 +228,8 @@
             display: flex;
             flex-direction: column;
             gap: 12px;
+            height: 210px;
+            overflow: hidden;
             transform: translateY(12px);
             opacity: 0;
             animation: lift-in 480ms ease forwards;
@@ -259,15 +261,12 @@
             grid-column: span 4;
             border-color: rgba(31, 157, 143, 0.22);
             background: rgba(255, 255, 255, 0.94);
-            cursor: pointer;
             transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
         }
 
-        .project-card:hover,
-        .project-card:focus-visible {
+        .project-card:hover {
             border-color: rgba(31, 157, 143, 0.45);
             box-shadow: 0 12px 28px rgba(31, 26, 26, 0.12);
-            outline: none;
         }
 
         .project-card .card-type {
@@ -279,20 +278,40 @@
             font-family: 'Space Mono', monospace;
             font-size: 0.8rem;
             opacity: 0.8;
-            word-break: break-all;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 2;
-            overflow: hidden;
+            min-width: 0;
         }
 
         .facts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
             font-family: 'Space Mono', monospace;
             font-size: 0.76rem;
             opacity: 0.75;
+            min-width: 0;
+        }
+
+        .swipe-line {
+            display: block;
+            max-width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .swipe-text {
+            display: inline-block;
+            min-width: max-content;
+            will-change: transform;
+        }
+
+        .swipe-line.is-overflowing .swipe-text {
+            animation: swipe-text var(--swipe-duration, 7s) ease-in-out 800ms infinite alternate;
+        }
+
+        @keyframes swipe-text {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(calc(-1 * var(--swipe-distance, 0px)));
+            }
         }
 
         .actions {
@@ -307,8 +326,10 @@
             border: 1px solid rgba(31, 26, 26, 0.15);
             border-radius: 12px;
             padding: 9px 11px;
+            font: inherit;
             font-weight: 600;
             color: var(--ink);
+            cursor: pointer;
             transition: transform 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
         }
 
@@ -770,6 +791,10 @@
             }[character]));
         }
 
+        function swipeLine(value) {
+            return `<span class="swipe-line"><span class="swipe-text">${escapeHtml(value)}</span></span>`;
+        }
+
         function pathToHref(filePath) {
             return String(filePath || '').split('/').map((segment) => encodeURIComponent(segment)).join('/');
         }
@@ -865,12 +890,10 @@
             article.dataset.types = typeKey;
             article.innerHTML = `
                 <span class="card-type">${escapeHtml(category)}</span>
-                <h2>${escapeHtml(file.name)}</h2>
-                <p class="path">${escapeHtml(file.path)}</p>
+                <h2>${swipeLine(file.name)}</h2>
+                <p class="path">${swipeLine(file.path)}</p>
                 <div class="facts">
-                    <span>folder: ${escapeHtml(folder)}</span>
-                    <span>${escapeHtml(ext || 'no extension')}</span>
-                    <span>${formatBytes(file.size)}</span>
+                    ${swipeLine(`folder: ${folder} ${ext || 'no extension'} ${formatBytes(file.size)}`)}
                 </div>
                 <div class="actions">
                     <a class="btn primary" href="${href}" target="_blank" rel="noopener noreferrer">Open File</a>
@@ -884,9 +907,6 @@
             const article = document.createElement('article');
             article.className = 'card project-card';
             article.style.animationDelay = `${Math.min(index * 45, 450)}ms`;
-            article.tabIndex = 0;
-            article.setAttribute('role', 'button');
-            article.setAttribute('aria-label', `Open ${project.name} folder list`);
 
             const typeKeys = project.typeKeys || getTypeKeys(project.files);
             const tags = [
@@ -903,20 +923,16 @@
             article.dataset.types = typeKeys.join(' ');
             article.innerHTML = `
                 <span class="card-type">Folder</span>
-                <h2>${escapeHtml(project.name)}</h2>
-                <p class="path">${project.files.length} file${project.files.length === 1 ? '' : 's'} in ${escapeHtml(project.path)}</p>
+                <h2>${swipeLine(project.name)}</h2>
+                <p class="path">${swipeLine(`${project.files.length} file${project.files.length === 1 ? '' : 's'} in ${project.path}`)}</p>
                 <div class="facts">
-                    <span>folder: ${escapeHtml(project.folder)}</span>
-                    <span>${escapeHtml(typeKeys.map((type) => type === 'none' ? 'no ext' : type).join(', '))}</span>
-                    <span>${formatBytes(project.size)}</span>
+                    ${swipeLine(`folder: ${project.folder} ${formatBytes(project.size)}`)}
+                </div>
+                <div class="actions">
+                    <button class="btn primary" type="button">Open Folder</button>
                 </div>
             `;
-            article.addEventListener('click', () => openProjectModal(project));
-            article.addEventListener('keydown', (event) => {
-                if (event.key !== 'Enter' && event.key !== ' ') return;
-                event.preventDefault();
-                openProjectModal(project);
-            });
+            article.querySelector('button').addEventListener('click', () => openProjectModal(project));
 
             return article;
         }
@@ -965,6 +981,24 @@
             document.body.style.overflow = '';
         }
 
+        function refreshSwipingText(scope = document) {
+            scope.querySelectorAll('.swipe-line').forEach((line) => {
+                const text = line.querySelector('.swipe-text');
+                if (!text) return;
+
+                line.classList.remove('is-overflowing');
+                line.style.removeProperty('--swipe-distance');
+                line.style.removeProperty('--swipe-duration');
+
+                const distance = Math.ceil(text.scrollWidth - line.clientWidth);
+                if (distance <= 2) return;
+
+                line.style.setProperty('--swipe-distance', `${distance}px`);
+                line.style.setProperty('--swipe-duration', `${Math.min(Math.max(distance / 18, 5), 12)}s`);
+                line.classList.add('is-overflowing');
+            });
+        }
+
         function updateFilter() {
             const query = search.value.toLowerCase().trim();
             const selectedFolder = folderFilter.value;
@@ -987,6 +1021,7 @@
                 status.style.display = 'none';
             }
             status.dataset.mode = visible === 0 ? 'filter' : '';
+            requestAnimationFrame(() => refreshSwipingText(cardsRoot));
         }
 
         function sortFiles(files, mode) {
@@ -1096,6 +1131,10 @@
         projectModalSearch.addEventListener('input', () => {
             if (activeProject) renderProjectModalFiles(activeProject, projectModalSearch.value);
         });
+        window.addEventListener('resize', () => refreshSwipingText(cardsRoot));
+        if (document.fonts) {
+            document.fonts.ready.then(() => refreshSwipingText(cardsRoot));
+        }
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && projectModal.classList.contains('open')) {
                 closeProjectModal();
