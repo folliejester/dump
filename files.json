@@ -48,6 +48,34 @@
       "folder": "root",
       "ext": "",
       "size": 35823
+    },
+    {
+      "path": "Sudofy/index.html",
+      "name": "index.html",
+      "folder": "Sudofy",
+      "ext": "html",
+      "size": 14758
+    },
+    {
+      "path": "Sudofy/ReadME.md",
+      "name": "ReadME.md",
+      "folder": "Sudofy",
+      "ext": "md",
+      "size": 0
+    },
+    {
+      "path": "Sudofy/script.js",
+      "name": "script.js",
+      "folder": "Sudofy",
+      "ext": "js",
+      "size": 72995
+    },
+    {
+      "path": "Sudofy/style.css",
+      "name": "style.css",
+      "folder": "Sudofy",
+      "ext": "css",
+      "size": 33436
     }
   ]
 }
