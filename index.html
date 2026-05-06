@@ -255,6 +255,17 @@
             word-break: break-word;
         }
 
+        .project-card {
+            grid-column: span 6;
+            border-color: rgba(31, 157, 143, 0.22);
+            background: rgba(255, 255, 255, 0.94);
+        }
+
+        .project-card .card-type {
+            background: rgba(255, 107, 53, 0.14);
+            color: #8d3717;
+        }
+
         .path {
             font-family: 'Space Mono', monospace;
             font-size: 0.8rem;
@@ -269,6 +280,51 @@
             font-family: 'Space Mono', monospace;
             font-size: 0.76rem;
             opacity: 0.75;
+        }
+
+        .project-files {
+            display: grid;
+            gap: 7px;
+        }
+
+        .project-file {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            min-width: 0;
+            border: 1px solid rgba(31, 26, 26, 0.08);
+            border-radius: 10px;
+            padding: 7px 9px;
+            color: var(--ink);
+            background: rgba(31, 26, 26, 0.035);
+            text-decoration: none;
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            transition: background-color 160ms ease, transform 160ms ease;
+        }
+
+        .project-file:hover {
+            background: rgba(31, 157, 143, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .project-file-name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .project-file-ext {
+            flex: 0 0 auto;
+            opacity: 0.68;
+            text-transform: uppercase;
+        }
+
+        .project-more {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            opacity: 0.65;
         }
 
         .actions {
@@ -336,6 +392,10 @@
             .card {
                 grid-column: span 6;
             }
+
+            .project-card {
+                grid-column: span 12;
+            }
         }
 
         @media (max-width: 640px) {
@@ -394,6 +454,7 @@
         const typeChips = document.getElementById('typeChips');
         let cards = [];
         let loadedFiles = [];
+        let cardItems = [];
         let selectedType = 'all';
 
         function formatBytes(bytes) {
@@ -555,14 +616,96 @@
             return map[ext] || 'File';
         }
 
+        function escapeHtml(value) {
+            return String(value || '').replace(/[&<>"']/g, (character) => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[character]));
+        }
+
+        function pathToHref(filePath) {
+            return String(filePath || '').split('/').map((segment) => encodeURIComponent(segment)).join('/');
+        }
+
+        function getProjectFolder(file) {
+            const filePath = file.path || '';
+            if (!filePath.includes('/')) return 'root';
+            return filePath.split('/')[0] || 'root';
+        }
+
+        function getTypeKeys(files) {
+            return [...new Set(files.map((file) => ((file.ext || '').toLowerCase() || 'none')))].sort((a, b) => a.localeCompare(b));
+        }
+
+        function pickProjectEntry(files) {
+            const sorted = [...files].sort((a, b) => a.path.localeCompare(b.path));
+            const htmlFiles = sorted.filter((file) => ['html', 'htm'].includes((file.ext || '').toLowerCase()));
+            const preferred = htmlFiles.find((file) => file.name.toLowerCase() === 'index.html');
+            return preferred || htmlFiles[0] || sorted[0];
+        }
+
+        function groupFilesIntoCards(files) {
+            const rootCards = [];
+            const projectMap = new Map();
+
+            files.forEach((file) => {
+                const projectFolder = getProjectFolder(file);
+
+                if (projectFolder === 'root') {
+                    rootCards.push({
+                        ...file,
+                        kind: 'file',
+                        files: [file],
+                        typeKeys: [((file.ext || '').toLowerCase() || 'none')]
+                    });
+                    return;
+                }
+
+                if (!projectMap.has(projectFolder)) {
+                    projectMap.set(projectFolder, {
+                        kind: 'project',
+                        name: projectFolder,
+                        path: `${projectFolder}/`,
+                        folder: projectFolder,
+                        ext: 'folder',
+                        size: 0,
+                        files: []
+                    });
+                }
+
+                const project = projectMap.get(projectFolder);
+                project.files.push(file);
+                project.size += file.size || 0;
+            });
+
+            const projectCards = [...projectMap.values()].map((project) => {
+                const filesInProject = [...project.files].sort((a, b) => a.path.localeCompare(b.path));
+                const entry = pickProjectEntry(filesInProject);
+
+                return {
+                    ...project,
+                    files: filesInProject,
+                    entry,
+                    typeKeys: getTypeKeys(filesInProject)
+                };
+            });
+
+            return [...rootCards, ...projectCards];
+        }
+
         function createCard(file, index) {
+            if (file.kind === 'project') return createProjectCard(file, index);
+
             const article = document.createElement('article');
             article.className = 'card';
             article.style.animationDelay = `${Math.min(index * 45, 450)}ms`;
 
             const ext = (file.ext || '').toLowerCase();
             const category = categoryFromExt(ext || file.name.toLowerCase());
-            const href = encodeURI(file.path);
+            const href = pathToHref(file.path);
             const folder = file.folder || 'root';
             const tags = `${file.name} ${file.path} ${folder} ${ext} ${category}`.toLowerCase();
             const typeKey = ext || 'none';
@@ -570,17 +713,66 @@
             article.dataset.tags = tags;
             article.dataset.folder = folder;
             article.dataset.type = typeKey;
+            article.dataset.types = typeKey;
             article.innerHTML = `
-                <span class="card-type">${category}</span>
-                <h2>${file.name}</h2>
-                <p class="path">${file.path}</p>
+                <span class="card-type">${escapeHtml(category)}</span>
+                <h2>${escapeHtml(file.name)}</h2>
+                <p class="path">${escapeHtml(file.path)}</p>
                 <div class="facts">
-                    <span>folder: ${folder}</span>
-                    <span>${ext || 'no extension'}</span>
+                    <span>folder: ${escapeHtml(folder)}</span>
+                    <span>${escapeHtml(ext || 'no extension')}</span>
                     <span>${formatBytes(file.size)}</span>
                 </div>
                 <div class="actions">
                     <a class="btn primary" href="${href}" target="_blank" rel="noopener noreferrer">Open File</a>
+                </div>
+            `;
+
+            return article;
+        }
+
+        function createProjectCard(project, index) {
+            const article = document.createElement('article');
+            article.className = 'card project-card';
+            article.style.animationDelay = `${Math.min(index * 45, 450)}ms`;
+
+            const entry = project.entry || project.files[0];
+            const entryHref = entry ? pathToHref(entry.path) : '#';
+            const typeKeys = project.typeKeys || getTypeKeys(project.files);
+            const previewFiles = project.files.slice(0, 5);
+            const remaining = project.files.length - previewFiles.length;
+            const tags = [
+                project.name,
+                project.path,
+                project.folder,
+                'project',
+                ...project.files.flatMap((file) => [file.name, file.path, file.ext || 'none'])
+            ].join(' ').toLowerCase();
+
+            article.dataset.tags = tags;
+            article.dataset.folder = project.folder;
+            article.dataset.type = 'folder';
+            article.dataset.types = typeKeys.join(' ');
+            article.innerHTML = `
+                <span class="card-type">Project</span>
+                <h2>${escapeHtml(project.name)}</h2>
+                <p class="path">${project.files.length} file${project.files.length === 1 ? '' : 's'} in ${escapeHtml(project.path)}</p>
+                <div class="facts">
+                    <span>folder: ${escapeHtml(project.folder)}</span>
+                    <span>${escapeHtml(typeKeys.map((type) => type === 'none' ? 'no ext' : type).join(', '))}</span>
+                    <span>${formatBytes(project.size)}</span>
+                </div>
+                <div class="project-files">
+                    ${previewFiles.map((file) => `
+                        <a class="project-file" href="${pathToHref(file.path)}" target="_blank" rel="noopener noreferrer">
+                            <span class="project-file-name">${escapeHtml(file.path.replace(`${project.folder}/`, ''))}</span>
+                            <span class="project-file-ext">${escapeHtml(file.ext || 'file')}</span>
+                        </a>
+                    `).join('')}
+                    ${remaining > 0 ? `<span class="project-more">+ ${remaining} more file${remaining === 1 ? '' : 's'}</span>` : ''}
+                </div>
+                <div class="actions">
+                    <a class="btn primary" href="${entryHref}" target="_blank" rel="noopener noreferrer">Open Project</a>
                 </div>
             `;
 
@@ -595,13 +787,13 @@
             cards.forEach((card) => {
                 const queryMatch = card.dataset.tags.includes(query);
                 const folderMatch = selectedFolder === 'all' || card.dataset.folder === selectedFolder;
-                const typeMatch = selectedType === 'all' || card.dataset.type === selectedType;
+                const typeMatch = selectedType === 'all' || (card.dataset.types || card.dataset.type || '').split(' ').includes(selectedType);
                 const show = queryMatch && folderMatch && typeMatch;
                 card.classList.toggle('hidden', !show);
                 if (show) visible += 1;
             });
 
-            count.textContent = `${visible} item${visible === 1 ? '' : 's'} visible`;
+            count.textContent = `${visible} card${visible === 1 ? '' : 's'} visible`;
             if (visible === 0) {
                 status.style.display = 'block';
                 status.textContent = 'No matches found. Try a different filter.';
@@ -668,7 +860,7 @@
         }
 
         function renderCards() {
-            const sorted = sortFiles(loadedFiles, sortFilter.value);
+            const sorted = sortFiles(cardItems, sortFilter.value);
             cardsRoot.innerHTML = '';
             cards = sorted.map((file, index) => createCard(file, index));
             cards.forEach((card) => cardsRoot.appendChild(card));
@@ -694,8 +886,9 @@
                 if (!response.ok) throw new Error('manifest not found');
                 const manifest = await response.json();
                 loadedFiles = (manifest.files || []).filter((f) => f.path !== 'files.json');
+                cardItems = groupFilesIntoCards(loadedFiles);
 
-                hydrateFolderFilter(loadedFiles);
+                hydrateFolderFilter(cardItems);
                 hydrateTypeChips(loadedFiles);
                 renderCards();
 

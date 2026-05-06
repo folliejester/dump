@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-skin="royal">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0d18">
+  <title>Sudofy Sudoku</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <div class="backdrop-texture" aria-hidden="true"></div>
+
+    <header class="top-bar">
+      <button class="brand-button" data-nav="home" aria-label="Sudofy home">
+        <span class="brand-mark">S</span>
+        <span>
+          <strong>Sudofy</strong>
+          <small>Sudoku Studio</small>
+        </span>
+      </button>
+
+      <div class="top-status">
+        <span class="status-pill" id="coinPill">0 coins</span>
+        <span class="status-pill" id="rankPill">Rank 1</span>
+        <button class="theme-switch" id="themeToggle" aria-label="Switch theme">
+          <span class="theme-switch-track">
+            <span class="theme-switch-knob"></span>
+          </span>
+        </button>
+      </div>
+    </header>
+
+    <main class="screen-stack">
+      <section class="screen active" id="homeScreen" data-screen="home">
+        <div class="hero-panel">
+          <div class="hero-copy">
+            <span class="eyebrow">Daily focus studio</span>
+            <h1>Sudoku with focused calm.</h1>
+            <p>Play crafted boards, chase streaks, earn trophies, and unlock rich board themes offline.</p>
+            <div class="hero-actions">
+              <button class="primary-action" id="startGameBtn">Start Puzzle</button>
+              <button class="secondary-action" id="resumeGameBtn">Resume</button>
+            </div>
+          </div>
+          <div class="rank-card">
+            <div class="rank-ring" id="rankRing">
+              <span id="rankLevel">1</span>
+            </div>
+            <div>
+              <strong id="rankTitle">Novice</strong>
+              <small id="rankProgressText">0 XP to next rank</small>
+              <div class="meter">
+                <span id="rankMeter"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Choose mode</span>
+            <h2>Game Modes</h2>
+          </div>
+          <button class="text-button" data-nav="shop">Rewards</button>
+        </div>
+
+        <div class="mode-grid" id="modeGrid">
+          <button class="mode-card active" data-mode="classic">
+            <span>Classic</span>
+            <small>Balanced rules</small>
+          </button>
+          <button class="mode-card" data-mode="journey">
+            <span>Journey</span>
+            <small>Progressive path</small>
+          </button>
+          <button class="mode-card" data-mode="daily">
+            <span>Daily</span>
+            <small>Seeded challenge</small>
+          </button>
+          <button class="mode-card" data-mode="zen">
+            <span>Zen</span>
+            <small>No pressure</small>
+          </button>
+          <button class="mode-card" data-mode="speed">
+            <span>Speed Run</span>
+            <small>Beat the clock</small>
+          </button>
+          <button class="mode-card" data-mode="survival">
+            <span>Survival</span>
+            <small>Few mistakes</small>
+          </button>
+          <button class="mode-card" data-mode="hardcore">
+            <span>Hardcore</span>
+            <small>No assists</small>
+          </button>
+          <button class="mode-card" data-mode="custom">
+            <span>Custom</span>
+            <small>Tune the rules</small>
+          </button>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Puzzle depth</span>
+            <h2>Difficulty</h2>
+          </div>
+          <span class="mini-stat" id="dailyStatus">Daily ready</span>
+        </div>
+
+        <div class="difficulty-grid" id="difficultyGrid">
+          <button class="difficulty-card active" data-difficulty="easy">
+            <strong>Easy</strong>
+            <span>More hints, full note assist</span>
+          </button>
+          <button class="difficulty-card" data-difficulty="medium">
+            <strong>Medium</strong>
+            <span>Balanced pressure</span>
+          </button>
+          <button class="difficulty-card" data-difficulty="hard">
+            <strong>Hard</strong>
+            <span>Sharper limits</span>
+          </button>
+          <button class="difficulty-card" data-difficulty="expert">
+            <strong>Expert</strong>
+            <span>Minimal safety net</span>
+          </button>
+        </div>
+
+        <div class="custom-panel hidden" id="customPanel">
+          <label>
+            <span>Clues</span>
+            <input type="range" id="customClues" min="24" max="52" value="36">
+          </label>
+          <label>
+            <span>Hints</span>
+            <input type="range" id="customHints" min="0" max="9" value="4">
+          </label>
+          <label>
+            <span>Mistakes</span>
+            <input type="range" id="customMistakes" min="1" max="9" value="4">
+          </label>
+          <label>
+            <span>Undo</span>
+            <input type="range" id="customUndo" min="0" max="90" value="45">
+          </label>
+        </div>
+
+        <div class="home-widgets">
+          <article class="reward-card">
+            <span class="eyebrow">Daily reward</span>
+            <h3 id="rewardTitle">Claim focus bonus</h3>
+            <p id="rewardCopy">Coins, XP, and streak energy refresh every day.</p>
+            <button class="secondary-action" id="dailyRewardBtn">Claim</button>
+          </article>
+          <article class="reward-card">
+            <span class="eyebrow">Lucky spin</span>
+            <h3>Spin for boosts</h3>
+            <p>Win coins, XP, and unlock tokens for stylish boards.</p>
+            <button class="secondary-action" id="openSpinBtn">Open Spin</button>
+          </article>
+          <article class="ad-slot">
+            <span>Ad Placeholder</span>
+            <strong>Rewarded break ready</strong>
+            <small>Native Android ad container can mount here later.</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="screen game-screen" id="gameScreen" data-screen="game">
+        <div class="game-layout">
+          <aside class="game-panel rule-panel">
+            <span class="eyebrow">Current rules</span>
+            <h2 id="gameModeTitle">Classic Easy</h2>
+            <div class="rule-list" id="ruleList"></div>
+            <div class="ad-slot compact">
+              <span>Ad Placeholder</span>
+              <small>In-game banner slot</small>
+            </div>
+          </aside>
+
+          <section class="play-surface">
+            <div class="hud">
+              <button class="icon-action" id="backHomeBtn" aria-label="Back to home">Home</button>
+              <div class="hud-center">
+                <strong id="timerText">00:00</strong>
+                <small id="gameSubline">Easy Classic</small>
+              </div>
+              <button class="icon-action" id="pauseBtn" aria-label="Pause game">Pause</button>
+            </div>
+
+            <div class="sudoku-wrap">
+              <div class="sudoku-board" id="sudokuBoard" role="grid" aria-label="Sudoku board"></div>
+            </div>
+
+            <div class="tool-row">
+              <button class="tool-button" id="undoBtn">Undo <span id="undoLeft">0</span></button>
+              <button class="tool-button" id="redoBtn">Redo</button>
+              <button class="tool-button" id="noteBtn">Notes</button>
+              <button class="tool-button" id="eraserBtn">Erase</button>
+              <button class="tool-button accent" id="hintBtn">Hint <span id="hintLeft">0</span></button>
+            </div>
+
+            <div class="number-pad" id="numberPad" aria-label="Number pad"></div>
+          </section>
+
+          <aside class="game-panel progress-panel">
+            <span class="eyebrow">Progress</span>
+            <div class="progress-stack">
+              <div>
+                <small>Mistakes</small>
+                <strong id="mistakeText">0 / 0</strong>
+              </div>
+              <div>
+                <small>Hints</small>
+                <strong id="hintText">0 / 0</strong>
+              </div>
+              <div>
+                <small>Streak</small>
+                <strong id="streakText">0</strong>
+              </div>
+            </div>
+            <div class="completion-list" id="completionList"></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="screen" id="statsScreen" data-screen="stats">
+        <div class="section-heading first">
+          <div>
+            <span class="eyebrow">Performance room</span>
+            <h2>Statistics</h2>
+          </div>
+          <span class="mini-stat" id="winRatePill">0% win rate</span>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card"><span>Total Games</span><strong id="statGames">0</strong></article>
+          <article class="stat-card"><span>Total Wins</span><strong id="statWins">0</strong></article>
+          <article class="stat-card"><span>Best Time</span><strong id="statBest">--</strong></article>
+          <article class="stat-card"><span>Average Solve</span><strong id="statAvg">--</strong></article>
+          <article class="stat-card"><span>No-Hint Best</span><strong id="statNoHint">--</strong></article>
+          <article class="stat-card"><span>Perfect Games</span><strong id="statPerfect">0</strong></article>
+          <article class="stat-card"><span>Daily Wins</span><strong id="statDaily">0</strong></article>
+          <article class="stat-card"><span>Total Play Time</span><strong id="statPlayTime">--</strong></article>
+        </div>
+
+        <div class="charts-grid">
+          <article class="chart-card">
+            <h3>Weekly Graph</h3>
+            <div class="bar-chart" id="weeklyChart"></div>
+          </article>
+          <article class="chart-card">
+            <h3>Monthly Graph</h3>
+            <div class="micro-chart" id="monthlyChart"></div>
+          </article>
+          <article class="chart-card">
+            <h3>Difficulty Completion</h3>
+            <div class="difficulty-chart" id="difficultyChart"></div>
+          </article>
+          <article class="chart-card">
+            <h3>Best Time Progress</h3>
+            <div class="line-chart" id="bestTimeChart"></div>
+          </article>
+          <article class="chart-card ratio-card">
+            <h3>Win / Loss Ratio</h3>
+            <div class="ratio-donut" id="ratioDonut"><span id="ratioLabel">0%</span></div>
+          </article>
+          <article class="chart-card">
+            <h3>Streak History</h3>
+            <div class="bar-chart compact-bars" id="streakChart"></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="screen" id="trophyScreen" data-screen="trophies">
+        <div class="section-heading first">
+          <div>
+            <span class="eyebrow">Achievement hall</span>
+            <h2>Trophies</h2>
+          </div>
+          <span class="mini-stat" id="trophyPill">0 unlocked</span>
+        </div>
+        <div class="achievement-grid" id="achievementGrid"></div>
+      </section>
+
+      <section class="screen" id="shopScreen" data-screen="shop">
+        <div class="section-heading first">
+          <div>
+            <span class="eyebrow">Reward lounge</span>
+            <h2>Shop and Rewards</h2>
+          </div>
+          <span class="mini-stat" id="shopCoinPill">0 coins</span>
+        </div>
+
+        <div class="shop-layout">
+          <article class="spin-card">
+            <div class="spin-wheel" id="spinWheel">
+              <span>XP</span>
+              <span>Coins</span>
+              <span>Skin</span>
+              <span>Bonus</span>
+            </div>
+            <button class="primary-action" id="spinBtn">Spin</button>
+            <small id="spinStatus">One free spin daily.</small>
+          </article>
+
+          <div class="shop-grid" id="shopGrid"></div>
+        </div>
+      </section>
+
+      <section class="screen" id="settingsScreen" data-screen="settings">
+        <div class="section-heading first">
+          <div>
+            <span class="eyebrow">Control room</span>
+            <h2>Settings</h2>
+          </div>
+        </div>
+
+        <div class="settings-list">
+          <label class="setting-row">
+            <span><strong>Sound</strong><small>Soft taps and win tones</small></span>
+            <input type="checkbox" data-setting="sound">
+          </label>
+          <label class="setting-row">
+            <span><strong>Vibration</strong><small>Uses Android vibration when available</small></span>
+            <input type="checkbox" data-setting="vibration">
+          </label>
+          <label class="setting-row">
+            <span><strong>Dark Mode</strong><small>Luxury gaming palette</small></span>
+            <input type="checkbox" data-setting="darkMode">
+          </label>
+          <label class="setting-row">
+            <span><strong>Left-Hand Mode</strong><small>Rebalances game controls</small></span>
+            <input type="checkbox" data-setting="leftHand">
+          </label>
+          <label class="setting-row">
+            <span><strong>Accessibility Mode</strong><small>Larger cells and stronger contrast</small></span>
+            <input type="checkbox" data-setting="accessibility">
+          </label>
+          <label class="setting-row">
+            <span><strong>Battery Saver</strong><small>Reduces animation intensity</small></span>
+            <input type="checkbox" data-setting="batterySaver">
+          </label>
+          <button class="danger-action" id="resetBtn">Reset Progress</button>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="active" data-nav="home">Home</button>
+      <button data-nav="game">Game</button>
+      <button data-nav="stats">Stats</button>
+      <button data-nav="trophies">Trophies</button>
+      <button data-nav="settings">Settings</button>
+    </nav>
+  </div>
+
+  <div class="toast-layer" id="toastLayer" aria-live="polite"></div>
+  <div class="modal-layer hidden" id="modalLayer" role="dialog" aria-modal="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
